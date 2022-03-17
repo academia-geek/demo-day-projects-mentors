@@ -5,9 +5,9 @@ export const LoginBg = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100%;
-    margin:50px 10px ;
+    height: 100vh;
+    padding:0px 10px ;
+    color:white;
 
     form{
         display: flex;
@@ -29,6 +29,7 @@ export const LoginBg = styled.div`
                 width: 20vw;
                 padding: 10px 5px;
                 margin: 10px 0px;
+                border-radius:4px;
             }
             button{
                 background-color:#32959B;
@@ -37,9 +38,11 @@ export const LoginBg = styled.div`
                 width: 10vw;
                 padding: 10px 5px;
                 border-radius: 4px;
+                border: solid 1px #32959B;
+                border-radius:4px;
             }
             .link{
-                color:#32959B;
+                color:#34D3DD;
             }
         }
         .redes{
@@ -48,11 +51,18 @@ export const LoginBg = styled.div`
             justify-content: space-between;
             button{
                 margin: 0px 10px;
-                background-color:red;
                 display: flex;
                 flex-direction: row;
                 justify-content:space-evenly;
                 align-items: center;
+            }
+            .google{
+                background-color: #AF0000;
+                border: solid 1px #AF0000;
+            }
+            .facebook{
+                background-color: #0254F2;
+                border: solid 1px #0254F2;
             }
         }
     }

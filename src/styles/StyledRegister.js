@@ -5,9 +5,9 @@ export const RegisterBg = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100%;
-    margin:50px 10px ;
+    height: 100vh;
+    padding:0px 10px ;
+    color:white;
 
     form{
         display: flex;
@@ -29,6 +29,7 @@ export const RegisterBg = styled.div`
                 width: 15vw;
                 padding: 10px 5px;
                 margin: 10px 0px;
+                border-radius: 4px;
             }
             button{
                 background-color:#32959B;
@@ -36,10 +37,12 @@ export const RegisterBg = styled.div`
                 font-size:14px;
                 width: 10vw;
                 padding: 10px 5px;
+                background-color:#32959B;
+                border: solid 1px #32959B;
                 border-radius: 4px;
             }
             .link{
-                color:#32959B;
+                color:#34D3DD;
             }
         }
         .registrar{

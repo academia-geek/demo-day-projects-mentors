@@ -42,8 +42,8 @@ const Login = () => {
                     <input id="password" type="password" name="password" value={password} onChange={handleInputChange} />
                 </div>
                 <div className='redes'>
-                    <button onClick={handleGoogle}><AiOutlineGoogle /> Google</button>
-                    <button onClick={handleFacebook}><FaFacebookF /> Facebook</button>
+                    <button onClick={handleGoogle} className="google"><AiOutlineGoogle /> Google</button>
+                    <button onClick={handleFacebook} className="facebook"><FaFacebookF /> Facebook</button>
                 </div>
                 <div>
                     <p>¿No tienes cuenta? <Link className='link' to="/register">Registrate</Link></p>
