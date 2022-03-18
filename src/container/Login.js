@@ -38,7 +38,7 @@ const Login = () => {
                     <input id="email" type="email" name="email" value={email} onChange={handleInputChange} />
                 </div>
                 <div>
-                    <label for="password">Contraseña</label>
+                    <label for="password">Contraseñaa</label>
                     <input id="password" type="password" name="password" value={password} onChange={handleInputChange} />
                 </div>
                 <div className='redes'>
