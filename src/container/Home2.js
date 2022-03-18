@@ -24,7 +24,7 @@ const Home2 = () => {
                         <div class="col">
                             <div class="card shadow-sm">
                                 <div class="card-body">
-                                    <img src='https://files.lafm.com.co/assets/public/2020-01/abogado.jpg' style={{ width: '100%' }} />
+                                    <img src='https://files.lafm.com.co/assets/public/2020-01/abogado.jpg' style={{ width: '100%' }} alt="mentors" />
                                     <p class="card-text">csadcfsefdrsfv</p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">

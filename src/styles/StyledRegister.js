@@ -7,8 +7,16 @@ export const RegisterBg = styled.div`
     align-items: center;
     height: 100vh;
     padding:0px 10px ;
-    color:white;
 
+    .register{
+        border: 0.2px solid black;
+        border-radius: 4px;
+        padding:20px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50vw;
+    }
     form{
         display: flex;
         flex-direction: column;
@@ -42,7 +50,7 @@ export const RegisterBg = styled.div`
                 border-radius: 4px;
             }
             .link{
-                color:#34D3DD;
+                color:#32959B;
             }
         }
         .registrar{

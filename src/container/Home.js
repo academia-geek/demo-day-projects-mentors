@@ -20,12 +20,12 @@ const Home = () => {
                         <Search />
                     </div>
                     <div className='col'>
-                        <img src='https://res.cloudinary.com/dmdu8u7wo/image/upload/v1647620709/proyecto-final/Online_learning-bro_lqdqki.png' style={{ width: '70%' }} />
+                        <img src='https://res.cloudinary.com/dmdu8u7wo/image/upload/v1647620709/proyecto-final/Online_learning-bro_lqdqki.png' style={{ width: '70%' }} alt="mentors" />
                     </div>
                 </div>
                 <div className='row'>
                     <div className='col m-5'>
-                        <img src='https://res.cloudinary.com/dmdu8u7wo/image/upload/v1647625466/proyecto-final/Online_learning-amico_e61krp.png' style={{ width: '70%' }} />
+                        <img src='https://res.cloudinary.com/dmdu8u7wo/image/upload/v1647625466/proyecto-final/Online_learning-amico_e61krp.png' style={{ width: '70%' }} alt="mentors" />
                     </div>
                     <div className='col m-5'>
                         <h2 className='m-2'>
@@ -49,12 +49,12 @@ const Home = () => {
                                 la combinación perfecta</h5>
                             <p class="card-text">Aprende y
                                 Explora</p>
-                            <a href="#" class="btn btn-success">Hagamoslo Realidad</a>
+                            <a href="/" class="btn btn-success">Hagamoslo Realidad</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }

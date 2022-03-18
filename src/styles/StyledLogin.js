@@ -7,8 +7,16 @@ export const LoginBg = styled.div`
     align-items: center;
     height: 100vh;
     padding:0px 10px ;
-    color:white;
 
+    .login{
+        border: 0.2px solid black;
+        border-radius: 4px;
+        padding:20px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50vw;
+    }
     form{
         display: flex;
         flex-direction: column;
@@ -21,6 +29,7 @@ export const LoginBg = styled.div`
             align-items:center;
             margin: 10px 5px;
 
+          
             label{
                 font-weight: 500;
                 font-size:18px;
@@ -42,7 +51,7 @@ export const LoginBg = styled.div`
                 border-radius:4px;
             }
             .link{
-                color:#34D3DD;
+                color:#32959B;
             }
         }
         .redes{
