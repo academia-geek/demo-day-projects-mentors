@@ -31,7 +31,6 @@ export const LoginBg = styled.div`
 
           
             label{
-                font-weight: 500;
                 font-size:18px;
             }
             input{
