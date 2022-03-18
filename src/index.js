@@ -7,7 +7,7 @@ import { store } from './redux/store/store';
 
 ReactDOM.render(
   <Provider store={store}>
-    <div style={{ backgroundColor: '#0C4759' }}>
+    <div>
       <App />
     </div>
   </Provider>,
