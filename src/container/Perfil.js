@@ -72,6 +72,7 @@ const Perfil = () => {
               <h5>Tiempo de respuesta: 4 Hr</h5>
               <h5>Numeros de alumnos: +50</h5>
               <button className="btn btn-outline-success bg-success text-white m-2" type="submit">Agendar</button>
+              
             </div>
           </div>
         ))
