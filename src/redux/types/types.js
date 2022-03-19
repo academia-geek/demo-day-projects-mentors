@@ -3,3 +3,8 @@ export const types = {
     logout: 'logout',
     register: 'register'
 }
+
+export const typesMentors = {
+    details: 'details',
+    search: 'search'
+}
