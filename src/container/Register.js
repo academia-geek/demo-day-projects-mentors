@@ -25,37 +25,39 @@ const Register = () => {
 
     return (
         <RegisterBg>
-            <h1>Registro</h1>
-            <form onSubmit={handleRegister}>
-                <div>
+            <div className='register'>
+                <h1>Registro</h1>
+                <form onSubmit={handleRegister}>
                     <div>
-                        <input type="text" name="name" placeholder="Nombre" value={name} onChange={handleInputChange} />
+                        <div>
+                            <input type="text" name="name" placeholder="Nombre" value={name} onChange={handleInputChange} />
+                        </div>
+                        <div>
+                            <input type="text" name="lastname" placeholder="Apellido" value={lastname} onChange={handleInputChange} />
+                        </div>
                     </div>
                     <div>
-                        <input type="text" name="lastname" placeholder="Apellido" value={lastname} onChange={handleInputChange} />
+                        <div>
+                            <input type="number" name="phone" placeholder="Teléfono" value={phone} onChange={handleInputChange} />
+                        </div>
+                        <div>
+                            <input type="number" name="celphone" placeholder="Celular" value={celphone} onChange={handleInputChange} />
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <div>
-                        <input type="number" name="phone" placeholder="Teléfono" value={phone} onChange={handleInputChange} />
+                    <div className="cuenta">
+                        <div>
+                            <input type="email" name="email" placeholder="Correo electrónico" value={email} onChange={handleInputChange} />
+                        </div>
+                        <div>
+                            <input type="password" name="password" placeholder="Contraseña" value={password} onChange={handleInputChange} />
+                        </div>
                     </div>
-                    <div>
-                        <input type="number" name="celphone" placeholder="Celular" value={celphone} onChange={handleInputChange} />
+                    <div className="registrar">
+                        <p>¿Quieres iniciar sesión? <Link className='link' to="/login">Iniciar Sesión</Link></p>
+                        <button>Enviar</button>
                     </div>
-                </div>
-                <div className="cuenta">
-                    <div>
-                        <input type="email" name="email" placeholder="Correo electrónico" value={email} onChange={handleInputChange} />
-                    </div>
-                    <div>
-                        <input type="password" name="password" placeholder="Contraseña" value={password} onChange={handleInputChange} />
-                    </div>
-                </div>
-                <div className="registrar">
-                    <p>¿Quieres iniciar sesión? <Link className='link' to="/login">Iniciar Sesión</Link></p>
-                    <button>Enviar</button>
-                </div>
-            </form>
+                </form>
+            </div>
         </RegisterBg>
     )
 }

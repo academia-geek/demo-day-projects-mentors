@@ -31,25 +31,27 @@ const Login = () => {
 
     return (
         <LoginBg>
-            <h1>Iniciar Sesión</h1>
-            <form onSubmit={handleLogin}>
-                <div>
-                    <label for="email">Correo electrónico</label>
-                    <input id="email" type="email" name="email" value={email} onChange={handleInputChange} />
-                </div>
-                <div>
-                    <label for="password">Contraseñaa</label>
-                    <input id="password" type="password" name="password" value={password} onChange={handleInputChange} />
-                </div>
-                <div className='redes'>
-                    <button onClick={handleGoogle} className="google"><AiOutlineGoogle /> Google</button>
-                    <button onClick={handleFacebook} className="facebook"><FaFacebookF /> Facebook</button>
-                </div>
-                <div>
-                    <p>¿No tienes cuenta? <Link className='link' to="/register">Registrate</Link></p>
-                    <button>Iniciar Sesión</button>
-                </div>
-            </form>
+            <div className="login">
+                <h1>Iniciar Sesión</h1>
+                <form onSubmit={handleLogin}>
+                    <div>
+                        <label for="email">Correo electrónico</label>
+                        <input id="email" type="email" name="email" value={email} onChange={handleInputChange} />
+                    </div>
+                    <div>
+                        <label for="password">Contraseña</label>
+                        <input id="password" type="password" name="password" value={password} onChange={handleInputChange} />
+                    </div>
+                    <div className='redes'>
+                        <button onClick={handleGoogle} className="google"><AiOutlineGoogle /> Google</button>
+                        <button onClick={handleFacebook} className="facebook"><FaFacebookF /> Facebook</button>
+                    </div>
+                    <div>
+                        <p>¿No tienes cuenta? <Link className='link' to="/register">Registrate</Link></p>
+                        <button>Iniciar Sesión</button>
+                    </div>
+                </form>
+            </div>
         </LoginBg>
     )
 }
