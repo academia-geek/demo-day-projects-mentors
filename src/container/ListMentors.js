@@ -22,31 +22,28 @@ const ListMentors = () => {
                 </div>
             </section >
 
-            <div className="album py-5 bg-light">
+            <div className="album py-2 bg-light">
                 <div className="container">
-                    <div className="row row-cols-md-3 g-3">
-                        <div>
-                            <div style={{ flexWrap: 'wrap' }}>
-                                {search.map((mentors) => (
-                                    <div key={mentors.codeProfile}>
-                                        <Link onClick={() => { dispatch(profileAsync(mentors.codeProfile)) }} to={"/profile/" + mentors.codeProfile} className="card-body btn btn-white m-2 border border-success">
-                                            <button className="btn btn-white">
-                                                <img src='https://files.lafm.com.co/assets/public/2020-01/abogado.jpg' style={{ width: '100%' }} alt="mentors" />
-                                                <h5 className="card-text">{mentors.name}</h5>
-                                                <div className="d-flex justify-content-between align-items-center">
-                                                    <div className="row row-cols-1">
-                                                        <p>profesion</p>
-                                                        <p>email</p>
-                                                    </div>
-                                                    <small className="text-muted">texto</small>
+                    <div>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
+                            {search.map((mentors) => (
+                                <div key={mentors.codeProfile} style={{ width: '25vw' }}>
+                                    <Link onClick={() => { dispatch(profileAsync(mentors.codeProfile)) }} to={"/profile/" + mentors.codeProfile} className="card-body btn btn-white m-2 border border-success">
+                                        <button className="btn btn-white">
+                                            <img src='https://files.lafm.com.co/assets/public/2020-01/abogado.jpg' style={{ width: '100%' }} alt="mentors" />
+                                            <h5 className="card-text">{mentors.name}</h5>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <div className="row row-cols-1">
+                                                    <p>profesion</p>
+                                                    <p>email</p>
                                                 </div>
-                                            </button>
-                                        </Link>
-                                    </div>
-
-                                ))
-                                }
-                            </div>
+                                                <small className="text-muted">texto</small>
+                                            </div>
+                                        </button>
+                                    </Link>
+                                </div>
+                            ))
+                            }
                         </div>
                     </div>
                 </div>

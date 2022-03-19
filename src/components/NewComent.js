@@ -8,7 +8,7 @@ const NewComent = () => {
 
     const dispatch = useDispatch()
 
-    const [ values, handleInputChange, reset, setValues ] = useForm({
+    const [values, handleInputChange, reset, setValues] = useForm({
         nameuser: '',
         emailuser: '',
         title: '',
@@ -49,7 +49,7 @@ const NewComent = () => {
                 <h3><strong>Escribir opinión de nuestros productos</strong></h3>
 
                 <p>Comparte tu opinión con otros clientes</p>
-                        <Form>
+                <Form>
 
                     <Form.Group>
                         <div className="form-group col-md-0">
@@ -57,7 +57,7 @@ const NewComent = () => {
                             <Form.Control
                                 type="text"
                                 name="nameuser"
-                                
+
                                 value={nameuser}
                                 onChange={handleInputChange}
                                 required
@@ -70,7 +70,7 @@ const NewComent = () => {
 
                                 type="text"
                                 name="emailuser"
-                                
+
                                 value={emailuser}
                                 onChange={handleInputChange}
                                 required
@@ -83,7 +83,7 @@ const NewComent = () => {
 
                                 type="text"
                                 name="title"
-                                
+
                                 value={title}
                                 onChange={handleInputChange}
                                 required
@@ -96,7 +96,7 @@ const NewComent = () => {
                                 <Form.Control
                                     as="textarea"
                                     name="opinion"
-                                    
+
                                     value={opinion}
                                     placeholder="Leave a comment here"
                                     style={{ height: '100px' }}
@@ -108,8 +108,6 @@ const NewComent = () => {
                         <br />
 
                         <div>
-
-
                             <div className="d-flex gap-2 my-3">
 
                                 {
@@ -126,8 +124,6 @@ const NewComent = () => {
                                 }
                             </div>
                         </div>
-
-
                     </Form.Group>
                 </Form>
             </div>
