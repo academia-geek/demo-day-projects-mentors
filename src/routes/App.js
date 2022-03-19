@@ -29,10 +29,10 @@ function App() {
     <div>
       <NavBar isLoggedIn={isLoggedIn} />
       <Routes>
-        <Route path="/login" element={!isLoggedIn ? <Login /> : <Navigate to="/" />} />
-        <Route path="/register" element={!isLoggedIn ? <Register /> : <Navigate to="/" />} />
-        <Route path="/" element={!isLoggedIn ? <Home /> : <Navigate to="/profile" />} />
-        <Route path="/list" element={!isLoggedIn ? <Home2 /> : <Navigate to="/profile" />} />
+        <Route path="/login" element={!isLoggedIn ? <Login /> : <Navigate to="/profile" />} />
+        <Route path="/register" element={!isLoggedIn ? <Register /> : <Navigate to="/profile" />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/list" element={<Home2 />} />
         <Route path="/profile" element={isLoggedIn ? <Perfil /> : <Navigate to="/" />} />
       </Routes>
     </div>
