@@ -1,5 +1,7 @@
 import React from 'react'
 import Footer from '../components/Footer'
+import NewComent from '../components/NewComent'
+import Opinions from '../components/Opinions'
 import Search from '../components/Search'
 
 const Home = () => {
@@ -41,6 +43,8 @@ const Home = () => {
 
                     </div>
                 </div>
+                <NewComent/>
+                <Opinions/>
                 <div>
                     <div className="card text-center bg-dark text-white">
                         <div className="card-body">
