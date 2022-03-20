@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
 import NewComent from '../components/NewComent'
 import Opinions from '../components/Opinions'
 import Search from '../components/Search'
 
-const Home = () => {
+const Home = ({ isLoggedIn }) => {
     return (
         <div>
             <div className='m-5'>
@@ -38,13 +39,17 @@ const Home = () => {
                             5 estrellas a alguno de nuestros profes
                         </h4>
                         <div className="d-grid gap-2 col-6 m-2">
-                            <button className="btn btn-success" type="button">Buscar tu Mentor's</button>
+                            <Link to="/list">
+                                <button className="btn btn-success" type="button">Buscar tu Mentor's</button>
+                            </Link>
                         </div>
 
                     </div>
                 </div>
-                <NewComent/>
-                <Opinions/>
+                {isLoggedIn &&
+                    <NewComent />
+                }
+                <Opinions isLoggedIn={isLoggedIn} />
                 <div>
                     <div className="card text-center bg-dark text-white">
                         <div className="card-body">

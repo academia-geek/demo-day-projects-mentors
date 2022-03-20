@@ -26,9 +26,9 @@ const Search = () => {
     return (
         <div>
             <nav className="navbar navbar-light">
-                <div className="container-fluid">
+                <div className="container-fluid" style={{ display: 'flex', justifyContent: 'center' }}>
                     <form onSubmit={formik.handleSubmit} className="d-flex">
-                        <select className="form-select" aria-label="Default select example" name="search" onChange={formik.handleChange}>
+                        <select className="form-select" aria-label="Default select example" name="search" onChange={formik.handleChange} style={{ width: '25vw' }} >
                             <option value=''>Busca por categorías</option>
                             <option value="Abogado">Abogado</option>
                             <option value="Marketing">Marketing</option>
