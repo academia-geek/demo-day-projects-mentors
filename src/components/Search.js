@@ -33,11 +33,6 @@ const Search = () => {
                             <option value="Abogado">Abogado</option>
                             <option value="Marketing">Marketing</option>
                             <option value="Finanzas">Finanzas</option>
-                            <option value="Contabilidad">Contabilidad</option>
-                            <option value="Ventas">Ventas</option>
-                            <option value="Logistica">Logistica</option>
-                            <option value="Empoderamiento">Empoderamiento</option>
-                            <option value="Psicología">Psicología</option>
                         </select>
                         <button className="btn btn-outline-success" type="submit">Buscar</button>
                     </form>

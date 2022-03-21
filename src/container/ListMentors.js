@@ -30,14 +30,14 @@ const ListMentors = () => {
                                 <div key={mentors.codeProfile} style={{ width: '25vw' }}>
                                     <Link onClick={() => { dispatch(profileAsync(mentors.codeProfile)) }} to={"/profile/" + mentors.codeProfile} className="card-body btn btn-white m-2 border border-success">
                                         <button className="btn btn-white">
-                                            <img src='https://files.lafm.com.co/assets/public/2020-01/abogado.jpg' style={{ width: '100%' }} alt="mentors" />
-                                            <h5 className="card-text">{mentors.name}</h5>
-                                            <div className="d-flex justify-content-between align-items-center">
+                                            <img src={mentors.img} alt="mentors" width="250" height="200" />
+                                            <h5 className="card-text py-2">{mentors.name}</h5>
+                                            <div className="d-flex justify-content-between align-items-center" style={{ height: '20vh' }}>
                                                 <div className="row row-cols-1">
-                                                    <p>profesion</p>
-                                                    <p>email</p>
+                                                    <p>{mentors.education}</p>
+                                                    <p><strong>Correo:</strong> {mentors.email}</p>
                                                 </div>
-                                                <small className="text-muted">texto</small>
+                                                {/* <small className="text-muted">texto</small> */}
                                             </div>
                                         </button>
                                     </Link>
