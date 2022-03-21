@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
 import NewComent from '../components/NewComent'
 import Opinions from '../components/Opinions'
 import Search from '../components/Search'
 
-const Home = () => {
+const Home = ({ isLoggedIn }) => {
     return (
         <div>
             <div className='m-5'>
@@ -12,11 +13,11 @@ const Home = () => {
                     <div className='col m-5'>
                         <h2 className='m-2'>
                             Encuentra tu <br />
-                            profesor ideal
+                            Mentor ideal
                         </h2>
                         <h4 className='m-4'>
                             En línea o presencial, <br />
-                            elige entre 18 millones de profesores
+                            elige entre 17 millones de Mentores
                         </h4>
                         <Search />
                     </div>
@@ -30,25 +31,29 @@ const Home = () => {
                     </div>
                     <div className='col m-5'>
                         <h2 className='m-2'>
-                            Profesores<br />
+                            Mentores<br />
                             profesionales y calificados
                         </h2>
                         <h4 className='m-4'>
                             Más de un millón de alumnos han dado una calificación
-                            5 estrellas a alguno de nuestros profes
+                            5 estrellas a alguno de nuestros Mentor's
                         </h4>
                         <div className="d-grid gap-2 col-6 m-2">
-                            <button className="btn btn-success" type="button">Buscar tu Mentor's</button>
+                            <Link to="/list">
+                                <button className="btn btn-success" type="button">Buscar tu Mentor's</button>
+                            </Link>
                         </div>
 
                     </div>
                 </div>
-                <NewComent/>
-                <Opinions/>
+                {isLoggedIn &&
+                    <NewComent />
+                }
+                <Opinions isLoggedIn={isLoggedIn} />
                 <div>
                     <div className="card text-center bg-dark text-white">
                         <div className="card-body">
-                            <h5 className="card-title">Estudiante y profesor,
+                            <h5 className="card-title">Estudiante y mentor,
                                 la combinación perfecta</h5>
                             <p className="card-text">Aprende y
                                 Explora</p>

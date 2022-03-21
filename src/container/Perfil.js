@@ -14,6 +14,8 @@ const Perfil = () => {
 
   return (
     <div>
+
+
       <div className='container m-5'>
         {search.map((mentors) => (
           <div className="row justify-content-between">
@@ -71,12 +73,14 @@ const Perfil = () => {
               <h5>Tarifa horaria:      $70.00 Hr</h5>
               <h5>Tiempo de respuesta: 4 Hr</h5>
               <h5>Numeros de alumnos: +50</h5>
-              <button className="btn btn-outline-success bg-success text-white m-2" type="submit">Agendar</button>
-              
+              <a href='https://calendly.com/danielrozo11-49/30min'>
+                <button className="btn btn-outline-success bg-success text-white m-2" type="submit">Agendar</button>
+              </a>
+              <div class="calendly-inline-widget" data-url="https://calendly.com/danielrozo11-49" style={{ minWidth: '300px', height: '500px' }}></div>
+              <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             </div>
           </div>
         ))
-
         }
       </div>
       <Footer />
