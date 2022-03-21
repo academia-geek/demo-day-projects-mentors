@@ -22,21 +22,20 @@ const Perfil = () => {
             <div className="col-8">
               <div className="card">
                 <div className="card-body">
-                  <h5 className="card-title text-center">Profesor de inglés certificado, experimentado, flexible.<br /> clases 100% online con material interactivo
-                  </h5>
+                  <h5 className="card-title text-center">{mentors.description}</h5>
                   <div className='row m-5 text-center'>
 
                     <div className="col card">
                       <h5 className="card-title"><FcGraduationCap /><br />Educacion</h5>
-                      <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p className="card-text">{mentors.education}</p>
                     </div>
                     <div className="col card">
                       <h5 className="card-title"><FcPositiveDynamic /><br />Experiencia</h5>
-                      <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p className="card-text">{mentors.experience}</p>
                     </div>
                     <div className="col card">
                       <h5 className="card-title"><FcVoicePresentation /><br />Idiomas</h5>
-                      <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p className="card-text">{mentors.languages}</p>
                     </div>
                   </div>
                   <div>
@@ -67,12 +66,12 @@ const Perfil = () => {
             </div>
             <div className="col-4 text-center">
 
-              <img src='https://files.lafm.com.co/assets/public/2020-01/abogado.jpg' style={{ width: '80%' }} alt="mentors" />
+              <img src={mentors.img} style={{ width: '80%' }} alt="mentors" />
               <h2>{mentors.name}</h2>
               <p><FaStarHalfAlt /> Opiniones (+57)</p>
-              <h5>Tarifa horaria:      $70.00 Hr</h5>
+              <h5>Tarifa horaria:     {mentors.price} Hr</h5>
               <h5>Tiempo de respuesta: 4 Hr</h5>
-              <h5>Numeros de alumnos: +50</h5>
+              <h5>{mentors.email}</h5>
               <a href='https://calendly.com/danielrozo11-49/30min'>
                 <button className="btn btn-outline-success bg-success text-white m-2" type="submit">Agendar</button>
               </a>
