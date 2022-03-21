@@ -75,7 +75,7 @@ const Perfil = () => {
               <a href='https://calendly.com/danielrozo11-49/30min'>
                 <button className="btn btn-outline-success bg-success text-white m-2" type="submit">Agendar</button>
               </a>
-              <div class="calendly-inline-widget" data-url="https://calendly.com/danielrozo11-49" style={{ minWidth: '300px', height: '500px' }}></div>
+              <div class="calendly-inline-widget" data-url={mentors.calendly} style={{ minWidth: '300px', height: '500px' }}></div>
               <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             </div>
           </div>
