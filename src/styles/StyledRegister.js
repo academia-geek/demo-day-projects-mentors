@@ -11,11 +11,14 @@ export const RegisterBg = styled.div`
     .register{
         border: 0.2px solid black;
         border-radius: 4px;
-        padding:20px 20px;
+        padding:10px 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 50vw;
+        @media screen and (max-width: 768px) {
+            width: 375px;
+        }
     }
     form{
         display: flex;
@@ -48,6 +51,9 @@ export const RegisterBg = styled.div`
                 background-color:#32959B;
                 border: solid 1px #32959B;
                 border-radius: 4px;
+                @media screen and (max-width: 768px) {
+                    width: 20vw;
+                }
             }
             .link{
                 color:#32959B;
@@ -64,7 +70,21 @@ export const RegisterBg = styled.div`
             flex-direction: column;
             justify-content:center;
             align-items:center;
-
+            @media screen and (max-width: 768px) {
+                input{
+                    width: 25vw;
+                }
+            }
         }
+        .data{
+            @media screen and (max-width: 768px) {
+                display: flex;
+                flex-direction: column;
+                input{
+                    width: 25vw;
+                }
+            }
+        }
+       
     }
 `

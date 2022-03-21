@@ -72,7 +72,7 @@ const Perfil = () => {
               <h5>Tarifa horaria:     {mentors.price} Hr</h5>
               <h5>Tiempo de respuesta: 4 Hr</h5>
               <h5>{mentors.email}</h5>
-              <a href='https://calendly.com/danielrozo11-49/30min'>
+              <a href={mentors.calendly}>
                 <button className="btn btn-outline-success bg-success text-white m-2" type="submit">Agendar</button>
               </a>
               <div class="calendly-inline-widget" data-url={mentors.calendly} style={{ minWidth: '300px', height: '500px' }}></div>

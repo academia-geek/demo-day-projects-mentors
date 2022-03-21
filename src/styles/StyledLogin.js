@@ -48,6 +48,9 @@ export const LoginBg = styled.div`
                 border-radius: 4px;
                 border: solid 1px #32959B;
                 border-radius:4px;
+                @media screen and (max-width: 768px) {
+                    width: 20vw;
+                }
             }
             .link{
                 color:#32959B;
@@ -72,6 +75,20 @@ export const LoginBg = styled.div`
                 background-color: #0254F2;
                 border: solid 1px #0254F2;
             }
+            @media screen and (max-width: 768px) {
+                display: flex;
+                flex-direction: column;            
+                justify-content: center;
+                align-items: center;
+                
+                button{
+                    margin: 10px;
+                }
+            }
+           
+        }
+        @media screen and (max-width: 768px) {
+            width: 375px;
         }
     }
 `
