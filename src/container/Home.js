@@ -4,12 +4,13 @@ import Footer from '../components/Footer'
 import NewComent from '../components/NewComent'
 import Opinions from '../components/Opinions'
 import Search from '../components/Search'
+import { Bghome } from '../styles/StyledHome'
 
 const Home = ({ isLoggedIn }) => {
     return (
-        <div>
+        <Bghome>
             <div className='m-5'>
-                <div className='row'>
+                <div className='row head'>
                     <div className='col m-5'>
                         <h2 className='m-2'>
                             Encuentra tu <br />
@@ -25,7 +26,7 @@ const Home = ({ isLoggedIn }) => {
                         <img src='https://res.cloudinary.com/dmdu8u7wo/image/upload/v1647620709/proyecto-final/Online_learning-bro_lqdqki.png' style={{ width: '70%' }} alt="mentors" />
                     </div>
                 </div>
-                <div className='row'>
+                <div className='row head2'>
                     <div className='col m-5'>
                         <img src='https://res.cloudinary.com/dmdu8u7wo/image/upload/v1647625466/proyecto-final/Online_learning-amico_e61krp.png' style={{ width: '70%' }} alt="mentors" />
                     </div>
@@ -50,7 +51,7 @@ const Home = ({ isLoggedIn }) => {
                     <NewComent />
                 }
                 <Opinions isLoggedIn={isLoggedIn} />
-                <div>
+                <div className="section">
                     <div className="card text-center bg-dark text-white">
                         <div className="card-body">
                             <h5 className="card-title">Estudiante y mentor,
@@ -63,7 +64,7 @@ const Home = ({ isLoggedIn }) => {
                 </div>
             </div>
             <Footer />
-        </div>
+        </Bghome>
     )
 }
 
