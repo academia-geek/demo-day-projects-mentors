@@ -10,7 +10,7 @@ const Home = ({ isLoggedIn }) => {
     return (
         <Bghome>
             <div className='m-5'>
-                <div className='row head'>
+                <div className='row head1'>
                     <div className='col m-5'>
                         <h2 className='m-2'>
                             Encuentra tu <br />

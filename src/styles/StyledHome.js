@@ -8,11 +8,18 @@ export const Bghome = styled.div`
         align-items: center;
         width: 375px;
     }
-    .head{
+    .head1{
         @media screen and (max-width: 768px) {
             width: 375px;
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            h2, h4{
+                font-size:18px;
+                margin: 0px;
+            }
         }
     }
     .head2{
@@ -20,6 +27,13 @@ export const Bghome = styled.div`
             width: 375px;
             display: flex;
             flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            h2, h4{
+                font-size:18px;
+                margin: 0px;
+            }
         }
     }
     .section{

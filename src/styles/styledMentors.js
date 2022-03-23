@@ -21,7 +21,7 @@ export const Mentors = styled.div`
                 text-align:left;
             }
             img{
-                width: 200px;
+                width: 250px;
                 height: 200px;
             }
         }
