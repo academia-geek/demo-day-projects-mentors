@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Edit from '../modals/Edit';
 import { listComentAsync, deleteAsync } from '../redux/action/actionComents';
+import { BgOpinion } from '../styles/StyledHome';
 
 const Opinions = ({ isLoggedIn }) => {
 
@@ -27,7 +28,7 @@ const Opinions = ({ isLoggedIn }) => {
     return (
         <div>
 
-            <div className="my-5">
+            <BgOpinion className="my-5">
                 <div>
                     <h3>Opiniones de clientes</h3>
                 </div>
@@ -43,7 +44,7 @@ const Opinions = ({ isLoggedIn }) => {
                             </div>
                             <div>
                                 {isLoggedIn && e.nameUser === data.currentUser.displayName ?
-                                    <div>
+                                    <div className="buttons">
                                         <button type="button" value="update" onClick={() => handlePut(e.opinion)} className="btn btn-success mx-2">
                                             Editar comentario
                                         </button>
@@ -60,7 +61,7 @@ const Opinions = ({ isLoggedIn }) => {
                         </div>
                     ))
                 }
-            </div>
+            </BgOpinion>
             {
                 modal === true ? <Edit edit={edit} setModal={setModal} name={data.currentUser.displayName} /> : ''
             }

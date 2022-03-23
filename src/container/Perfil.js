@@ -5,6 +5,7 @@ import { FcGraduationCap } from "react-icons/fc";
 import { FcVoicePresentation } from "react-icons/fc";
 import { useSelector } from 'react-redux';
 import Footer from '../components/Footer';
+import { BgPerfil } from '../styles/StylePerfil';
 
 
 
@@ -16,14 +17,14 @@ const Perfil = () => {
     <div>
 
 
-      <div className='container m-5'>
-        {search.map((mentors) => (
-          <div className="row justify-content-between">
+      <BgPerfil className='container m-5'>
+        {search.map((mentors, index) => (
+          <div key={index} className="row justify-content-between perfil">
             <div className="col-8">
               <div className="card">
                 <div className="card-body">
-                  <h5 className="card-title text-center">{mentors.description}</h5>
-                  <div className='row m-5 text-center'>
+                  <h5 className="card-title text-center description">{mentors.description}</h5>
+                  <div className='row m-5 text-center info'>
 
                     <div className="col card">
                       <h5 className="card-title"><FcGraduationCap /><br />Educacion</h5>
@@ -39,8 +40,8 @@ const Perfil = () => {
                     </div>
                   </div>
                   <div>
+                    <h2 className='text-center m-3'>Descripción</h2>
                     <p>
-                      <h2 className='text-center m-3'>Descripción</h2>
                       ►►► NO SE REALIZAN EXÁMENES DE NINGÚN TIPO. EL PRESENTE PERFIL ES SOLO PARA CLASES DE INGLÉS PARTICULARES 1-1 ONLINE. ◄◄◄
 
                       ★★★ HORARIOS DISPONIBLES ★★★
@@ -64,7 +65,7 @@ const Perfil = () => {
                 </div>
               </div>
             </div>
-            <div className="col-4 text-center">
+            <div className="col-4 text-center mentor">
 
               <img src={mentors.img} style={{ width: '80%' }} alt="mentors" />
               <h2>{mentors.name}</h2>
@@ -75,13 +76,13 @@ const Perfil = () => {
               <a href={mentors.calendly}>
                 <button className="btn btn-outline-success bg-success text-white m-2" type="submit">Agendar</button>
               </a>
-              <div class="calendly-inline-widget" data-url={mentors.calendly} style={{ minWidth: '300px', height: '500px' }}></div>
+              <div className="calendly-inline-widget" data-url={mentors.calendly} style={{ minWidth: '300px', height: '500px' }}></div>
               <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             </div>
           </div>
         ))
         }
-      </div>
+      </BgPerfil>
       <Footer />
     </div>
 

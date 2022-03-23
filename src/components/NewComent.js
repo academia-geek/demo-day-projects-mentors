@@ -4,6 +4,7 @@ import { useForm } from '../hooks/useForm';
 import { registerComentAsync } from '../redux/action/actionComents';
 import { Form, FloatingLabel } from 'react-bootstrap';
 import { getAuth } from 'firebase/auth';
+import { Coment } from '../styles/StyledHome';
 
 const NewComent = () => {
 
@@ -30,7 +31,7 @@ const NewComent = () => {
     return (
         <div>
 
-            <div>
+            <Coment>
                 <h3><strong>Escribir opinión de nuestros productos</strong></h3>
 
                 <p>Comparte tu opinión con otros clientes</p>
@@ -58,7 +59,7 @@ const NewComent = () => {
                         </div>
                     </Form.Group>
                 </Form>
-            </div>
+            </Coment>
         </div>
     )
 }

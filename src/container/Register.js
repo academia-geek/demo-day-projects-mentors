@@ -28,7 +28,7 @@ const Register = () => {
             <div className='register'>
                 <h1>Registro</h1>
                 <form onSubmit={handleRegister}>
-                    <div>
+                    <div className='data'>
                         <div>
                             <input type="text" name="name" placeholder="Nombre" value={name} onChange={handleInputChange} />
                         </div>
@@ -36,7 +36,7 @@ const Register = () => {
                             <input type="text" name="lastname" placeholder="Apellido" value={lastname} onChange={handleInputChange} />
                         </div>
                     </div>
-                    <div>
+                    <div className='data'>
                         <div>
                             <input type="number" name="phone" placeholder="Teléfono" value={phone} onChange={handleInputChange} />
                         </div>
