@@ -4,6 +4,7 @@ import { loginReducers } from '../reducers/loginReducers';
 import { registerReducers } from '../reducers/registerReducers';
 import { searchReducers } from '../reducers/searchReducers';
 import { comentsReducer } from '../reducers/comentsReducer'
+import { mentorReducers } from '../reducers/mentorReducers';
 
 
 const composeEnhancers = (typeof window !== 'undefined' &&
@@ -13,7 +14,9 @@ const reducers = combineReducers({
     login: loginReducers,
     register: registerReducers,
     search: searchReducers,
-    coments: comentsReducer
+    coments: comentsReducer,
+    mentor:mentorReducers
+
 })
 
 export const store = createStore(

@@ -5,6 +5,7 @@ export const types = {
 }
 
 export const typesMentors = {
+    register: 'Register',
     details: 'details',
     search: 'search'
 }
