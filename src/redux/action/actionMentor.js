@@ -6,14 +6,15 @@ import { db } from '../../firebase/firebaseConfig';
 
 //Action Create Product Async
 export const registerMentorAsync = (newMentor) => {
+    console.log(newMentor);
     return (dispatch) => {
-        addDoc(collection(db,"mentors"),newMentor)
-        .then(resp => {
-            dispatch(registerMentorSync(newMentor))
-        })
-        .catch(error => {
-            console.log(error);
-        })
+        addDoc(collection(db, "mentors"), newMentor)
+            .then(resp => {
+                dispatch(registerMentorSync(newMentor))
+            })
+            .catch(error => {
+                console.log(error);
+            })
     }
 }
 

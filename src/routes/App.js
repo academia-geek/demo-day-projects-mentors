@@ -33,7 +33,7 @@ function App() {
         <Route path="/login" element={!isLoggedIn ? <Login /> : <Navigate to="/profile" />} />
         <Route path="/register" element={!isLoggedIn ? <Register /> : <Navigate to="/profile" />} />
         <Route path="/" element={<Home isLoggedIn={isLoggedIn} />} />
-        <Route path="/mentor" element={!isLoggedIn ? <NewMentors /> : <Navigate to="/profile" />} />
+        <Route path="/mentor" element={<NewMentors />} />
         <Route path="/list" element={<ListMentors />} />
         <Route path="/profile/:codeProfile" element={isLoggedIn ? <Perfil /> : <Navigate to="/login" />} />
         <Route path="/profile/" element={isLoggedIn && <Navigate to="/list" />} />
