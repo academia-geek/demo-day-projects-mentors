@@ -2,6 +2,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import NavBar from "../components/NavBar";
+import NewMentors from "../container/NewMentors";
 import Home from "../container/Home";
 import ListMentors from "../container/ListMentors";
 import Login from "../container/Login";
@@ -32,6 +33,7 @@ function App() {
         <Route path="/login" element={!isLoggedIn ? <Login /> : <Navigate to="/profile" />} />
         <Route path="/register" element={!isLoggedIn ? <Register /> : <Navigate to="/profile" />} />
         <Route path="/" element={<Home isLoggedIn={isLoggedIn} />} />
+        <Route path="/mentor" element={!isLoggedIn ? <NewMentors /> : <Navigate to="/profile" />} />
         <Route path="/list" element={<ListMentors />} />
         <Route path="/profile/:codeProfile" element={isLoggedIn ? <Perfil /> : <Navigate to="/login" />} />
         <Route path="/profile/" element={isLoggedIn && <Navigate to="/list" />} />

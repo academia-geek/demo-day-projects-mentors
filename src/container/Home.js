@@ -40,8 +40,8 @@ const Home = ({ isLoggedIn }) => {
                             5 estrellas a alguno de nuestros Mentor's
                         </h4>
                         <div className="d-grid gap-2 col-6 m-2">
-                            <Link to="/list">
-                                <button className="btn btn-success" type="button">Buscar tu Mentor's</button>
+                            <Link to="/mentor">
+                                <button className="btn btn-success" type="button">Registrarse como Mentor's</button>
                             </Link>
                         </div>
 
