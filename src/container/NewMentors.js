@@ -6,13 +6,14 @@ import { useForm } from '../hooks/useForm'
 import { registerMentorAsync } from '../redux/action/actionMentor'
 import { registerAsync } from '../redux/action/actionRegister'
 import { RegisterBg } from '../styles/StyledRegister'
+import { uid } from 'react-uid';
 
 const NewMentors = () => {
-
+    console.log(uid);
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const [values, handleInputChange] = useForm({
-        codeProfile: '',
+        // codeProfile: uid,
         name: '',
         description: '',
         img: '',
@@ -54,7 +55,7 @@ const NewMentors = () => {
 
     return (
         <>
-            <RegisterBg className='my-10'>
+            <RegisterBg>
                 <div className='register'>
                     <h1>Registrar como Mentor</h1>
                     <form onSubmit={handleRegister}>
@@ -63,35 +64,29 @@ const NewMentors = () => {
                                 <input type="text" name="name" placeholder="Nombre" value={name} onChange={handleInputChange} />
                             </div>
                             <div>
-                                <input type="text" name="description" placeholder="description" value={description} onChange={handleInputChange} />
+                                <input type="text" name="description" placeholder="Description" value={description} onChange={handleInputChange} />
                             </div>
                             <div>
-                                <input type="text" name="experience" placeholder="experience" value={experience} onChange={handleInputChange} />
+                                <input type="text" name="experience" placeholder="Experience" value={experience} onChange={handleInputChange} />
                             </div>
                         </div>
                         <div className='data'>
                             <div>
-                                <input type="text" name="price" placeholder="price" value={price} onChange={handleInputChange} />
+                                <input type="text" name="price" placeholder="Price" value={price} onChange={handleInputChange} />
                             </div>
                             <div>
-                                <input type="text" name="education" placeholder="education" value={education} onChange={handleInputChange} />
+                                <input type="text" name="education" placeholder="Education" value={education} onChange={handleInputChange} />
                             </div>
                             <div>
-                                <input type="text" name="calendly" placeholder="calendly" value={calendly} onChange={handleInputChange} />
+                                <input type="text" name="calendly" placeholder="Url de Calendly" value={calendly} onChange={handleInputChange} />
                             </div>
                         </div>
                         <div className='data'>
-
                             <div>
-                                <input type="number" name="codeProfile" placeholder="ingresa un id" value={codeProfile} onChange={handleInputChange} />
-                            </div>
-                            <div>
-                                <input type="text" name="languages" placeholder="languages" value={languages} onChange={handleInputChange} />
+                                <input type="text" name="languages" placeholder="Lenguajes" value={languages} onChange={handleInputChange} />
                             </div>
                         </div>
                         <div className='data'>
-
-
                             <div>
                                 <select className="form-select" aria-label="Default select example" name="category" onChange={handleInputChange} style={{ width: '15vw' }} required>
                                     <option value=''>Busca por categorías</option>
@@ -104,31 +99,31 @@ const NewMentors = () => {
                                 <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     {especialidad}
                                 </button>
-                                <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1" style={{ width: '20vw' }}>
+                                <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1" style={{ width: '25vw' }}>
                                     <li>
                                         <div className="dropdown-item" >
                                             <select className="form-select" aria-label="Default select example" name="especialidad" onChange={handleInputChange}>
-                                                <option value='' selected>Abogados</option>
-                                                <option value="Abogado financiero">Abogado financiero</option>
-                                                <option value="Abogado comercial">Abogado comercial</option>
+                                                <option value=''>Abogados</option>
+                                                <option value="Abogado Financiero">Abogado Financiero</option>
+                                                <option value="Abogado Comercial">Abogado Comercial</option>
                                             </select>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="dropdown-item" >
                                             <select className="form-select" aria-label="Default select example" name="especialidad" onChange={handleInputChange}>
-                                                <option value='' selected>Marketing</option>
+                                                <option value=''>Marketing</option>
                                                 <option value="Mercadotecnia">Mercadotecnia</option>
-                                                <option value="Marketing digital">Marketing digital</option>
+                                                <option value="Marketing Digital">Marketing Digital</option>
                                             </select>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="dropdown-item" >
                                             <select className="form-select" aria-label="Default select example" name="especialidad" onChange={handleInputChange}>
-                                                <option value='' selected>finanzas</option>
-                                                <option value="finanzas">finanzas</option>
-                                                <option value="contabilidad">contabilidad</option>
+                                                <option value=''>finanzas</option>
+                                                <option value="Finanzas">Finanzas</option>
+                                                <option value="Contabilidad">contabilidad</option>
                                             </select>
                                         </div>
                                     </li>

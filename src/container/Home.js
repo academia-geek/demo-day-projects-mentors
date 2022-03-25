@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import NewComent from '../components/NewComent'
 import Opinions from '../components/Opinions'
 import Search from '../components/Search'
+import SearchEspecialidad from '../components/SearchEspecialidad'
 import { Bghome } from '../styles/StyledHome'
 
 const Home = ({ isLoggedIn }) => {
@@ -20,7 +21,10 @@ const Home = ({ isLoggedIn }) => {
                             En línea o presencial, <br />
                             elige entre 17 millones de Mentores
                         </h4>
-                        <Search />
+                        <div>
+                            <SearchEspecialidad />
+                            <Search />
+                        </div>
                     </div>
                     <div className='col'>
                         <img src='https://res.cloudinary.com/dmdu8u7wo/image/upload/v1647620709/proyecto-final/Online_learning-bro_lqdqki.png' style={{ width: '70%' }} alt="mentors" />
