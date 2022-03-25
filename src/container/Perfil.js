@@ -6,12 +6,16 @@ import { FcVoicePresentation } from "react-icons/fc";
 import { useSelector } from 'react-redux';
 import Footer from '../components/Footer';
 import { BgPerfil } from '../styles/StylePerfil';
-
+import { getAuth } from "firebase/auth";
 
 
 const Perfil = () => {
 
   const { search } = useSelector((store) => store.search);
+  const data = getAuth()
+  const name = data.currentUser.displayName
+  const email = data.currentUser.email
+
 
   return (
     <div>
@@ -74,7 +78,11 @@ const Perfil = () => {
               <h5>Tiempo de respuesta: 4 Hr</h5>
               <h5>{mentors.email}</h5>
               <a href={mentors.calendly}>
-                <button className="btn btn-outline-success bg-success text-white m-2" type="submit">Agendar</button>
+                {mentors.name === name && mentors.email === email ?
+                  ''
+                  :
+                  <button className="btn btn-outline-success bg-success text-white m-2" type="submit">Agendar</button>
+                }
               </a>
               <div className="calendly-inline-widget" data-url={mentors.calendly} style={{ minWidth: '300px', height: '500px' }}></div>
               <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>

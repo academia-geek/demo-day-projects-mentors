@@ -104,7 +104,7 @@ const NewMentors = () => {
                                             <select className="form-select" aria-label="Default select example" name="especialidad" onChange={handleInputChange}>
                                                 <option value=''>Abogados</option>
                                                 <option value="Abogado Financiero">Abogado Financiero</option>
-                                                <option value="Abogado Comercial">Abogado Comercial</option>
+                                                <option value="Abogado Laboral">Abogado Laboral</option>
                                             </select>
                                         </div>
                                     </li>

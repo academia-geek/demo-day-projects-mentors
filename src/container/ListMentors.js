@@ -11,7 +11,6 @@ const ListMentors = () => {
 
     const dispatch = useDispatch()
     const { search } = useSelector(store => store.search)
-    console.log(search);
 
     return (
         <Mentors>
