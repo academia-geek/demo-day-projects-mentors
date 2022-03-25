@@ -11,6 +11,12 @@ export const searchReducers = (state = initialState, action) => {
             return {
                 search: action.payload
             }
+        case typesMentors.searchEspecialidad:
+
+            return {
+                search: action.payload
+            }
+
         case typesMentors.details:
             return {
                 search: action.payload

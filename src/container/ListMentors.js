@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
 import Search from '../components/Search'
+import SearchEspecialidad from '../components/SearchEspecialidad'
 import { profileAsync } from '../redux/action/actionProfile'
 import { Mentors } from '../styles/styledMentors'
 
@@ -10,15 +11,18 @@ const ListMentors = () => {
 
     const dispatch = useDispatch()
     const { search } = useSelector(store => store.search)
+    console.log(search);
 
     return (
         <Mentors>
-            <section className="py-5 text-center container">
+            <section className=" text-center container">
                 <div className="row py-lg-5">
                     <div className="col-lg-6 col-md-8 mx-auto">
                         <h1 className="fw-light">Busca Tu Mentor's</h1>
-
-                        <Search />
+                        <div className=" items-center">
+                            {/* <Search /> */}
+                            <SearchEspecialidad />
+                        </div>
                     </div>
                 </div>
             </section >

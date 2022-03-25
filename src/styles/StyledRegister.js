@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const RegisterBg = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 100vh;
     padding:0px 10px ;
@@ -30,7 +30,7 @@ export const RegisterBg = styled.div`
             display: flex;
             flex-direction: row;
             align-items:center;
-            margin: 5px 5px;
+            margin: 0px 5px;
 
             label{
                 font-weight: 500;
