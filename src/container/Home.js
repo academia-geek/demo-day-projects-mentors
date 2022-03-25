@@ -21,9 +21,9 @@ const Home = ({ isLoggedIn }) => {
                             En línea o presencial, <br />
                             elige entre 17 millones de Mentores
                         </h4>
-                        <div>
+                        <div >
+                            {/* <Search /> */}
                             <SearchEspecialidad />
-                            <Search />
                         </div>
                     </div>
                     <div className='col'>

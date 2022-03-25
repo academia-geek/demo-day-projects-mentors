@@ -6,14 +6,13 @@ import { useForm } from '../hooks/useForm'
 import { registerMentorAsync } from '../redux/action/actionMentor'
 import { registerAsync } from '../redux/action/actionRegister'
 import { RegisterBg } from '../styles/StyledRegister'
-import { uid } from 'react-uid';
+import { v4 as uuidv4 } from 'uuid';
 
 const NewMentors = () => {
-    console.log(uid);
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const [values, handleInputChange] = useForm({
-        // codeProfile: uid,
+        codeProfile: uuidv4(),
         name: '',
         description: '',
         img: '',
@@ -123,7 +122,7 @@ const NewMentors = () => {
                                             <select className="form-select" aria-label="Default select example" name="especialidad" onChange={handleInputChange}>
                                                 <option value=''>finanzas</option>
                                                 <option value="Finanzas">Finanzas</option>
-                                                <option value="Contabilidad">contabilidad</option>
+                                                <option value="Contabilidad">Contabilidad</option>
                                             </select>
                                         </div>
                                     </li>
