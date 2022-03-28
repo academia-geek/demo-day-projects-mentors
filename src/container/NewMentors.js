@@ -26,7 +26,7 @@ const NewMentors = () => {
         email: '',
         password: ''
     })
-    const { codeProfile, name, description, img, experience, price, especialidad, password, education, category, languages, calendly, email } = values
+    const { codeProfile, name, description, experience, price, especialidad, password, education, category, languages, calendly, email } = values
 
 
 
@@ -137,7 +137,7 @@ const NewMentors = () => {
                                 <input type="password" name="password" placeholder="password" value={password} onChange={handleInputChange} />
                             </div>
                             <div>
-                                <input type="file" name="img" placeholder="img" value={img} onChange={handleFileChanged} />
+                                <input type="file" name="img" placeholder="img" value={values.img} onChange={handleFileChanged} />
                             </div>
                         </div>
                         <div className="registrar">
