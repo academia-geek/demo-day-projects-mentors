@@ -8,6 +8,7 @@ import ListMentors from "../container/ListMentors";
 import Login from "../container/Login";
 import Perfil from "../container/Perfil";
 import Register from "../container/Register";
+import LandingPage from "../container/LandingPage";
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
         <Route path="/register" element={!isLoggedIn ? <Register /> : <Navigate to="/profile" />} />
         <Route path="/" element={<Home isLoggedIn={isLoggedIn} />} />
         <Route path="/mentor" element={!isLoggedIn ? <NewMentors /> : <Navigate to="/profile" />} />
+        <Route path="/Landing" element={<LandingPage isLoggedIn={isLoggedIn} />} />
         <Route path="/list" element={<ListMentors />} />
         <Route path="/profile/:codeProfile" element={isLoggedIn ? <Perfil /> : <Navigate to="/login" />} />
         <Route path="/profile/" element={isLoggedIn && <Navigate to="/list" />} />

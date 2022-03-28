@@ -53,7 +53,7 @@ const NewMentors = () => {
     }
 
     return (
-        <>
+        <div>
             <RegisterBg>
                 <div className='register'>
                     <h1>Registrar como Mentor</h1>
@@ -146,7 +146,7 @@ const NewMentors = () => {
                     </form>
                 </div>
             </RegisterBg>
-        </>
+        </div>
     )
 }
 
