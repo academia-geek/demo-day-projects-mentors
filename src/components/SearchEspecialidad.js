@@ -27,7 +27,24 @@ const SearchEspecialidad = () => {
     })
 
     return (
-        <Form onSubmit={formik.handleSubmit} className="dropdown d-flex justify-content-center my-3">
+        <Form onSubmit={formik.handleSubmit} className="d-flex">
+            <select className="form-select" aria-label="Default select example" name="searchEspecialidad" onChange={formik.handleChange} style={{ width: '25vw' }} >
+                <option value=''>Area de interes</option>
+                <option value="Abogado Financiero">¿Control de Estados financieros?</option>
+                <option value="Abogado Laboral">¿Asesorías legales para empresas?</option>
+                <option value="Marketing Digital">Estrategia para marketing de contenidos</option>
+                <option value="Mercadotecnia">Estrategia para Ventas y gestión comercial</option>
+                <option value="Financiero">¿Valoración de empresas?</option>
+                <option value="Contabilidad">¿Análisis y evaluación de carteras?</option>
+            </select>
+            <button className="btn btn-outline-success" type="submit">Buscar</button>
+        </Form>
+
+
+    )
+}
+
+{/* <Form onSubmit={formik.handleSubmit} className="dropdown d-flex justify-content-center my-3">
             <div style={{ marginRight: '30px' }}>
                 <button className="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                     {especialidad}
@@ -63,8 +80,6 @@ const SearchEspecialidad = () => {
                 </ul>
             </div>
             <button className="btn btn-outline-success" type="submit">Buscar</button>
-        </Form>
-    )
-}
+        </Form> */}
 
 export default SearchEspecialidad

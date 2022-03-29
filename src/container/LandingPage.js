@@ -9,7 +9,7 @@ const LandingPage = () => {
                     <div class="col-lg-7 text-center text-lg-start">
                         <h1 class="display-4 fw-bold lh-1 mb-3">Aumenta tus ingresos</h1>
                         <p class="col-lg-10 fs-4">Digitaliza tu negocio y atiende más clientes en todo el mundo.
-                            Con Mentor's, la plataforma para llevar tu negocio freelance a internet en pocos pasos y sin complicaciones</p>
+                            Con Mentor, la plataforma para llevar tu negocio freelance a internet en pocos pasos y sin complicaciones</p>
                         <div class="d-grid gap-1 text-center">
                             <button class="btn btn-success w-50" type="button">Registrarse</button>
                         </div>

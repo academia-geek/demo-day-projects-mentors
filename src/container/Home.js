@@ -14,10 +14,10 @@ const Home = ({ isLoggedIn }) => {
                     <div className='col m-5'>
                         <h2 className='m-2'>
                             Encuentra tu <br />
-                            Mentor ideal
+                            Mentor ideal.
                         </h2>
                         <h4 className='m-4'>
-                            En línea o presencial, <br />
+                            En línea <br />
                             elige entre 17 millones de Mentores
                         </h4>
                         <div >
@@ -26,12 +26,12 @@ const Home = ({ isLoggedIn }) => {
                         </div>
                     </div>
                     <div className='col'>
-                        <img src='https://res.cloudinary.com/dmdu8u7wo/image/upload/v1647620709/proyecto-final/Online_learning-bro_lqdqki.png' style={{ width: '70%' }} alt="mentors" />
+                        <img src='https://res.cloudinary.com/dmdu8u7wo/image/upload/v1648482956/proyecto-final/Video_call-bro_vsidud.png' style={{ width: '70%' }} alt="mentors" />
                     </div>
                 </div>
                 <div className='row head2'>
                     <div className='col m-5'>
-                        <img src='https://res.cloudinary.com/dmdu8u7wo/image/upload/v1647625466/proyecto-final/Online_learning-amico_e61krp.png' style={{ width: '70%' }} alt="mentors" />
+                        <img src='https://res.cloudinary.com/dmdu8u7wo/image/upload/v1648483017/proyecto-final/Online_learning-pana_qlubim.png' style={{ width: '70%' }} alt="mentors" />
                     </div>
                     <div className='col m-5'>
                         <h2 className='m-2'>
@@ -40,12 +40,12 @@ const Home = ({ isLoggedIn }) => {
                         </h2>
                         <h4 className='m-4'>
                             Más de un millón de alumnos han dado una calificación
-                            5 estrellas a alguno de nuestros Mentor's
+                            5 estrellas a alguno de nuestros Mentores
                         </h4>
                         <div className="d-grid gap-2 col-6 m-2">
                             {!isLoggedIn ?
                                 <Link to="/mentor">
-                                    <button className="btn btn-success" type="button">Registrarse como Mentor's</button>
+                                    <button className="btn btn-success" type="button">Registrarse como Mentor</button>
                                 </Link>
                                 :
                                 ''
