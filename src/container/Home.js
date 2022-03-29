@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
 import NewComent from '../components/NewComent'
 import Opinions from '../components/Opinions'
-import Search from '../components/Search'
 import SearchEspecialidad from '../components/SearchEspecialidad'
 import { Bghome } from '../styles/StyledHome'
 
@@ -44,9 +43,13 @@ const Home = ({ isLoggedIn }) => {
                             5 estrellas a alguno de nuestros Mentor's
                         </h4>
                         <div className="d-grid gap-2 col-6 m-2">
-                            <Link to="/mentor">
-                                <button className="btn btn-success" type="button">Registrarse como Mentor's</button>
-                            </Link>
+                            {!isLoggedIn ?
+                                <Link to="/mentor">
+                                    <button className="btn btn-success" type="button">Registrarse como Mentor's</button>
+                                </Link>
+                                :
+                                ''
+                            }
                         </div>
 
                     </div>
