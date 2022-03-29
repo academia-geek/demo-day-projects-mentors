@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { logoutAsync } from '../redux/action/actionLogin'
+import Search from './Search'
 
 const NavBar = ({ isLoggedIn }) => {
 
@@ -28,6 +29,9 @@ const NavBar = ({ isLoggedIn }) => {
               <a className="nav-link active" href="/">Ayuda</a>
             </li>
           </ul>
+          <div>
+            <Search />
+          </div>
           <div className="d-flex">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
