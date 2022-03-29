@@ -10,9 +10,9 @@ const NavBar = ({ isLoggedIn }) => {
   }
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">Mentor's</a>
+        <a className="navbar-brand" href="/"><img className='w-50 mx-2' src='https://res.cloudinary.com/dmdu8u7wo/image/upload/v1648569720/proyecto-final/mentorslogo_osljpf.png' alt='logo'></img></a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -22,7 +22,7 @@ const NavBar = ({ isLoggedIn }) => {
               <a className="nav-link active" aria-current="page" href="/">Inicio</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" href="/">Dar Clases</a>
+              <a className="nav-link active" href="/mentor">Registrarse como mentor</a>
             </li>
             <li className="nav-item">
               <a className="nav-link active" href="/">Ayuda</a>

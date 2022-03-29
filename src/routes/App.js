@@ -25,8 +25,6 @@ function App() {
       }
     })
   }, [])
-
-
   return (
     <div>
       <NavBar isLoggedIn={isLoggedIn} />
