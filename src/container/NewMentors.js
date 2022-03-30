@@ -55,10 +55,10 @@ const NewMentors = () => {
     return (
         <div>
             <RegisterBg>
-                <div className='register'>
+                <div className='register my-3 w-75'>
                     <h1>Registrar como Mentor</h1>
                     <form onSubmit={handleRegister}>
-                        <div className='data'>
+                        <div className='data my-2'>
                             <div>
                                 <input type="text" name="name" placeholder="Nombre" value={name} onChange={handleInputChange} />
                             </div>
@@ -68,25 +68,23 @@ const NewMentors = () => {
                             <div>
                                 <input type="text" name="experience" placeholder="Experience" value={experience} onChange={handleInputChange} />
                             </div>
-                        </div>
-                        <div className='data'>
                             <div>
                                 <input type="text" name="price" placeholder="Price" value={price} onChange={handleInputChange} />
                             </div>
+                        </div>
+                        <div className='data my-2'>
                             <div>
                                 <input type="text" name="education" placeholder="Education" value={education} onChange={handleInputChange} />
                             </div>
                             <div>
                                 <input type="text" name="calendly" placeholder="Url de Calendly" value={calendly} onChange={handleInputChange} />
                             </div>
-                        </div>
-                        <div className='data'>
                             <div>
                                 <input type="text" name="languages" placeholder="Lenguajes" value={languages} onChange={handleInputChange} />
                             </div>
                         </div>
-                        <div className='data'>
-                            <div>
+                        <div className='data my-2'>
+                            <div className=' mx-5'>
                                 <select className="form-select" aria-label="Default select example" name="category" onChange={handleInputChange} style={{ width: '15vw' }} required>
                                     <option value=''>Busca por categorías</option>
                                     <option value="Abogado">Abogado</option>
@@ -94,7 +92,7 @@ const NewMentors = () => {
                                     <option value="Finanzas">Finanzas</option>
                                 </select>
                             </div>
-                            <div className="dropdown">
+                            <div className="dropdown mx-5">
                                 <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     {especialidad}
                                 </button>
@@ -129,12 +127,10 @@ const NewMentors = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="cuenta">
+                        <div className="cuenta  my-2">
                             <div>
-                                <input type="email" name="email" placeholder="Correo electrónico" value={email} onChange={handleInputChange} />
-                            </div>
-                            <div>
-                                <input type="password" name="password" placeholder="password" value={password} onChange={handleInputChange} />
+                                <input type="email" name="email" placeholder="Correo electrónico" value={email} onChange={handleInputChange} className='mx-2' />
+                                <input type="password" name="password" placeholder="password" value={password} onChange={handleInputChange} className='mx-2' />
                             </div>
                             <div>
                                 <input type="file" name="img" placeholder="img" value={values.img} onChange={handleFileChanged} />

@@ -3,13 +3,14 @@ import styled from "styled-components";
 export const LoginBg = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 100vh;
-    padding:0px 10px ;
+    padding:10px 10px ;
 
     .login{
-        border: 0.2px solid black;
+        border: 0.2px solid #807d7d;
+        box-shadow: 10px 10px 15px #807d7d;
         border-radius: 4px;
         padding:20px 20px;
         display: flex;
@@ -38,9 +39,10 @@ export const LoginBg = styled.div`
                 padding: 10px 5px;
                 margin: 10px 0px;
                 border-radius:4px;
+                border: 0.5px solid black;
             }
             button{
-                background-color:#32959B;
+                background-color:#198754;
                 color: white;
                 font-size:14px;
                 width: 10vw;
@@ -68,11 +70,11 @@ export const LoginBg = styled.div`
                 align-items: center;
             }
             .google{
-                background-color: #AF0000;
+                background-color: #f74f4f;
                 border: solid 1px #AF0000;
             }
             .facebook{
-                background-color: #0254F2;
+                background-color: #4079e6;
                 border: solid 1px #0254F2;
             }
             @media screen and (max-width: 768px) {

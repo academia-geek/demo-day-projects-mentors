@@ -10,6 +10,8 @@ export const RegisterBg = styled.div`
 
     .register{
         border: 0.2px solid black;
+        border: 0.2px solid #807d7d;
+        box-shadow: 10px 10px 15px #807d7d;
         border-radius: 4px;
         padding:10px 20px;
         display: flex;
@@ -41,14 +43,14 @@ export const RegisterBg = styled.div`
                 padding: 10px 5px;
                 margin: 10px 0px;
                 border-radius: 4px;
+                border: 0.5px solid black;
             }
             button{
-                background-color:#32959B;
+                background-color:#198754;
                 color: white;
                 font-size:14px;
                 width: 10vw;
                 padding: 10px 5px;
-                background-color:#32959B;
                 border: solid 1px #32959B;
                 border-radius: 4px;
                 @media screen and (max-width: 768px) {

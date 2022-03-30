@@ -2,8 +2,8 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { logoutAsync } from '../redux/action/actionLogin'
 import Search from './Search'
-import {BiLogInCircle} from 'react-icons/bi';
-import {BiLogOutCircle} from 'react-icons/bi';
+import { BiLogInCircle } from 'react-icons/bi';
+import { BiLogOutCircle } from 'react-icons/bi';
 
 
 const NavBar = ({ isLoggedIn }) => {
@@ -39,9 +39,10 @@ const NavBar = ({ isLoggedIn }) => {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 {isLoggedIn ?
-                  <a onClick={handleLogout} className="nav-link active border-bottom border-success" href="/"><BiLogOutCircle className='m-2'/>Cerrar Sesión</a>
+                  <a onClick={handleLogout} className="nav-link active" href="/"><BiLogOutCircle className='m-2' />Cerrar Sesión</a>
                   :
-                  <a className="nav-link active border-bottom border-success" href="/login"><BiLogInCircle className='m-2'/>Inscribirse</a>
+                  <a className="nav-link active" href="/login"><BiLogInCircle className='m-2' />Inscribirse</a>
+
                 }
               </li>
             </ul>
