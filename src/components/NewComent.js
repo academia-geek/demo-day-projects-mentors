@@ -38,7 +38,7 @@ const NewComent = () => {
                 <Form>
 
                     <Form.Group>
-                        <div className="form-group col-md-0">
+                        <div className="form-group col-md-0 shadow p-3 bg-body rounded">
                             <FloatingLabel controlId="floatingTextarea2" label="">
                                 <Form.Control
                                     as="textarea"

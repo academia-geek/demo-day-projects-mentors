@@ -32,8 +32,8 @@ const SearchEspecialidad = () => {
                 <option value="Abogado Laboral">Asesoría legal para empresas</option>
                 <option value="Marketing Digital">Estrategia para marketing de contenidos</option>
                 <option value="Mercadotecnia">Estrategia para Ventas y gestión comercial</option>
-                <option value="Financiero">¿Valoración de empresas?</option>
-                <option value="Contabilidad">¿Análisis y evaluación de carteras?</option>
+                <option value="Financiero">Viabilidad y Como Valorar la empresa</option>
+                <option value="Contabilidad">Que hacer para cumplir mis objetivos financieros</option>
             </select>
             <button className="btn btn-outline-success" type="submit">Buscar</button>
         </Form>

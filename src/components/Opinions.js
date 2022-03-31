@@ -34,7 +34,7 @@ const Opinions = ({ isLoggedIn }) => {
                 </div>
                 {
                     coments.map((e, i) => (
-                        <div key={i}>
+                        <div className='shadow p-3 mb-5 bg-body rounded' key={i}>
                             <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', margin: "20px 0px" }}>
                                 <img src={e.photoURL} alt="user" width="80px" style={{ borderRadius: '50%' }} />
                                 <div className="mx-3">

@@ -14,7 +14,7 @@ const NavBar = ({ isLoggedIn }) => {
   }
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light border-bottom border-success">
+    <nav className="navbar navbar-expand-lg navbar-light border-bottom shadow p-3 mb-5 bg-body rounded">
       <div className="container-fluid">
         <a className="navbar-brand" href="/"><img width='80px' src='https://res.cloudinary.com/dmdu8u7wo/image/upload/v1648585899/proyecto-final/Mentor_cultj2.png' alt='logo'></img></a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

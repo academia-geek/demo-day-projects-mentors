@@ -26,16 +26,16 @@ const ListMentors = () => {
                 </div>
             </section >
 
-            <div className="album py-2 bg-light">
+            <div className="album py-2">
                 <div className="container">
                     <div>
                         <div className="list" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
                             {search.map((mentors) => (
-                                <div key={mentors.codeProfile} style={{ width: '25vw' }}>
-                                    <Link onClick={() => { dispatch(profileAsync(mentors.codeProfile)) }} to={"/profile/" + mentors.codeProfile} className="card-body btn btn-white m-2 border border-success">
+                                <div className='cardshawos m-2' key={mentors.codeProfile} style={{ width: '25vw' }}>
+                                    <Link onClick={() => { dispatch(profileAsync(mentors.codeProfile)) }} to={"/profile/" + mentors.codeProfile} className="card-body btn btn-white m-2">
                                         <button className="btn btn-white">
-                                            <img src={mentors.img} alt="mentors" width="250" height="200" />
-                                            <h5 className="card-text py-2">{mentors.name}</h5>
+                                            <img className='rounded' src={mentors.img} alt="mentors" width="250" height="200" />
+                                            <h5 className="card-text pt-3">{mentors.name}</h5>
                                             <div className="d-flex justify-content-between align-items-center info" style={{ height: '20vh' }}>
                                                 <div className="row row-cols-1 ">
                                                     <p>{mentors.education}</p>

@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
 export const Mentors = styled.div`
+    .cardshawos{
+        border: 0.2px solid black;
+        border: 0.2px solid #807d7d;
+        box-shadow: 10px 10px 15px #807d7d;
+        border-radius: 4px;  
+    }
     @media screen and (max-width: 768px) {
         width: 375px;
         display: flex;

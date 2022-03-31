@@ -21,10 +21,10 @@ const Perfil = () => {
     <div>
 
 
-      <BgPerfil className='container m-5'>
+      <BgPerfil className='m-5'>
         {search.map((mentors, index) => (
           <div key={index} className="row justify-content-between perfil">
-            <div className="col-8">
+            <div className="col-8 shadow p-1 mb-3 bg-body rounded">
               <div className="card">
                 <div className="card-body">
                   <h5 className="card-title text-center description">{mentors.description}</h5>
@@ -69,12 +69,12 @@ const Perfil = () => {
                 </div>
               </div>
             </div>
-            <div className="col-4 text-center mentor">
+            <div className="col-4 text-center mentor shadow mb-3 bg-body rounded">
 
-              <img src={mentors.img} style={{ width: '80%' }} alt="mentors" />
+              <img className='shadow p-3 mb-3 bg-body rounded' src={mentors.img} style={{ width: '80%' }} alt="mentors" />
               <h2>{mentors.name}</h2>
               <p><FaStarHalfAlt /> Opiniones (+57)</p>
-              <h5>Tarifa horaria:     {mentors.price} Hr</h5>
+              <h5>2  Sesiones:     {mentors.price} Hr</h5>
               <h5>Tiempo de respuesta: 4 Hr</h5>
               <h5>{mentors.email}</h5>
               <a href={mentors.calendly}>
@@ -84,8 +84,8 @@ const Perfil = () => {
                   <button className="btn btn-outline-success bg-success text-white m-2" type="submit">Agendar</button>
                 }
               </a>
-              <div className="calendly-inline-widget" data-url={mentors.calendly} style={{ minWidth: '300px', height: '500px' }}></div>
-              <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+              {/* <div className="calendly-inline-widget bg-black" data-url={mentors.calendly} style={{ minWidth: '300px', height: '500px' }}></div>
+              <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> */}
             </div>
           </div>
         ))
