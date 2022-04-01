@@ -24,57 +24,51 @@ const Perfil = () => {
       <BgPerfil className='m-5'>
         {search.map((mentors, index) => (
           <div key={index} className="row justify-content-between perfil">
-            <div className="col-8 shadow p-1 mb-3 bg-body rounded">
-              <div className="card">
-                <div className="card-body">
-                  <h5 className="card-title text-center description">{mentors.description}</h5>
+            <div className="col-8">
+              <div className="card mx-5">
+                <div className="card-body shadow bg-body rounded">
+                  <h5 className="card-title text-left description fst-italic m-2">{mentors.description}</h5>
                   <div className='row m-5 text-center info'>
 
-                    <div className="col card">
+                    <div className="col card border border-success rounded m-2">
                       <h5 className="card-title"><FcGraduationCap /><br />Educacion</h5>
                       <p className="card-text">{mentors.education}</p>
                     </div>
-                    <div className="col card">
+                    <div className="col card border border-success rounded m-2">
                       <h5 className="card-title"><FcPositiveDynamic /><br />Experiencia</h5>
                       <p className="card-text">{mentors.experience}</p>
                     </div>
-                    <div className="col card">
+                    <div className="col card border border-success rounded m-2">
                       <h5 className="card-title"><FcVoicePresentation /><br />Idiomas</h5>
                       <p className="card-text">{mentors.languages}</p>
                     </div>
                   </div>
                   <div>
                     <h2 className='text-center m-3'>Descripción</h2>
-                    <p>
-                      ►►► NO SE REALIZAN EXÁMENES DE NINGÚN TIPO. EL PRESENTE PERFIL ES SOLO PARA CLASES DE INGLÉS PARTICULARES 1-1 ONLINE. ◄◄◄
+                    <div>
+                      <p>No se realizan exámenes de ningun tipo. El presente perfil es solo para mentorias particulares 1-1 online.</p>
 
-                      ★★★ HORARIOS DISPONIBLES ★★★
+                      <h5>HORARIOS DISPONIBLES</h5>
 
-                      LUNES - 07:00 A.M. - 07:00 P.M.
-                      MARTES - 07:00 A.M. - 07:00 P.M.
-                      MIÉRCOLES - 07:00 A.M. - 07:00 P.M.
-                      JUEVES - 07:00 A.M. - 07:00 P.M.
-                      VIERNES - 07:00 A.M. - 07:00 P.M.
-
-                      NOTA: En el caso de requerir un horario fuera de los mencionados anteriormente, solo abro un horario más a partir de paquetes de 10 clases, en muy contadas ocasiones. Dicho horario sería de 7-8 p.m. (hora local Colombia) con base en disponibilidad. Las reservas en ese caso yo las haría internamente.
-
-                      ►►► PRECIOS NORMALES ◄◄◄
-
-                      ★ 60 MINUTES SESSION - COP 70.000
-                      ★ 5 SESSIONS PACK - COP 330.000
-                      ★ 10 SESSIONS PACK - COP 680.000
-                      ★ 1 MONTH PACK (20 SESSIONS) - COP 1.380.000
-                    </p>
+                      <ul>
+                        <ol>LUNES - 07:00 A.M. - 07:00 P.M.</ol>
+                        <ol>MARTES - 07:00 A.M. - 07:00 P.M.</ol>
+                        <ol>MIÉRCOLES - 07:00 A.M. - 07:00 P.M.</ol>
+                        <ol>JUEVES - 07:00 A.M. - 07:00 P.M.</ol>
+                        <ol>VIERNES - 07:00 A.M. - 07:00 P.M.</ol>
+                      </ul>
+                      <strong>NOTA:</strong> En el caso de requerir un horario fuera de los mencionados anteriormente, solo abro un horario más a partir de paquetes de 10 clases, en muy contadas ocasiones. Dicho horario sería de 7-8 p.m. (hora local Colombia) con base en disponibilidad. Las reservas en ese caso yo las haría internamente. 
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-4 text-center mentor shadow mb-3 bg-body rounded">
+            <div className="col-4 text-center h-50 mentor shadow-lg p-3 mb-5 bg-white rounded">
 
-              <img className='shadow p-3 mb-3 bg-body rounded' src={mentors.img} style={{ width: '80%' }} alt="mentors" />
+              <img className='mx-2 my-4' src={mentors.img} style={{ width: '80%' }} alt="mentors" />
               <h2>{mentors.name}</h2>
               <p><FaStarHalfAlt /> Opiniones (+57)</p>
-              <h5>2  Sesiones:     {mentors.price} Hr</h5>
+              <h5> x2 - Sesiones:     {mentors.price} Hr</h5>
               <h5>Tiempo de respuesta: 4 Hr</h5>
               <h5>{mentors.email}</h5>
               <a href={mentors.calendly}>
@@ -87,6 +81,7 @@ const Perfil = () => {
               {/* <div className="calendly-inline-widget bg-black" data-url={mentors.calendly} style={{ minWidth: '300px', height: '500px' }}></div>
               <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> */}
             </div>
+            
           </div>
         ))
         }

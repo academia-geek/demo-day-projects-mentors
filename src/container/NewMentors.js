@@ -18,7 +18,7 @@ const NewMentors = () => {
         img: '',
         experience: '',
         price: '',
-        especialidad: 'Especialidad',
+        especialidad: 'Area de Experiencia',
         education: '',
         category: '',
         languages: '',
@@ -86,7 +86,7 @@ const NewMentors = () => {
                         <div className='data my-1'>
                             <div className=' mx-5'>
                                 <select className="form-select" aria-label="Default select example" name="category" onChange={handleInputChange} style={{ width: '15vw' }} required>
-                                    <option value=''>Busca por categorías</option>
+                                    <option value=''>Categoría</option>
                                     <option value="Abogado">Abogado</option>
                                     <option value="Marketing">Marketing</option>
                                     <option value="Finanzas">Finanzas</option>
@@ -101,8 +101,8 @@ const NewMentors = () => {
                                         <div className="dropdown-item" >
                                             <select className="form-select" aria-label="Default select example" name="especialidad" onChange={handleInputChange}>
                                                 <option value=''>Abogados</option>
-                                                <option value="Abogado Financiero">Abogado Financiero</option>
-                                                <option value="Abogado Laboral">Abogado Laboral</option>
+                                                <option value="Abogado Financiero">Asesoría Contable y financiera</option>
+                                                <option value="Abogado Laboral">Asesoría legal para empresas</option>
                                             </select>
                                         </div>
                                     </li>
@@ -110,8 +110,8 @@ const NewMentors = () => {
                                         <div className="dropdown-item" >
                                             <select className="form-select" aria-label="Default select example" name="especialidad" onChange={handleInputChange}>
                                                 <option value=''>Marketing</option>
-                                                <option value="Mercadotecnia">Mercadotecnia</option>
-                                                <option value="Marketing Digital">Marketing Digital</option>
+                                                <option value="Mercadotecnia">Estrategia para Ventas y gestión comercial</option>
+                                                <option value="Marketing Digital">Estrategia para marketing de contenidos</option>
                                             </select>
                                         </div>
                                     </li>
@@ -119,8 +119,8 @@ const NewMentors = () => {
                                         <div className="dropdown-item" >
                                             <select className="form-select" aria-label="Default select example" name="especialidad" onChange={handleInputChange}>
                                                 <option value=''>finanzas</option>
-                                                <option value="Financiero">Financiero</option>
-                                                <option value="Contabilidad">Contabilidad</option>
+                                                <option value="Financiero">Viabilidad y Como Valorar la empresa</option>
+                                                <option value="Contabilidad">Que hacer para cumplir mis objetivos financieros</option>
                                             </select>
                                         </div>
                                     </li>

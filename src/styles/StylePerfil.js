@@ -11,7 +11,7 @@ export const BgPerfil = styled.div`
             width: 375px;
 
             .mentor{
-                width: 300px;
+                width: 240px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
