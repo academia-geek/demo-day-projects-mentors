@@ -58,7 +58,7 @@ const NewMentors = () => {
                 <div className='register my-3 w-75'>
                     <h1>Registrar como Mentor</h1>
                     <form onSubmit={handleRegister}>
-                        <div className='data my-2'>
+                        <div className='data my-1'>
                             <div>
                                 <input type="text" name="name" placeholder="Nombre" value={name} onChange={handleInputChange} />
                             </div>
@@ -72,7 +72,7 @@ const NewMentors = () => {
                                 <input type="text" name="price" placeholder="Price" value={price} onChange={handleInputChange} />
                             </div>
                         </div>
-                        <div className='data my-2'>
+                        <div className='data my-1'>
                             <div>
                                 <input type="text" name="education" placeholder="Education" value={education} onChange={handleInputChange} />
                             </div>
@@ -83,7 +83,7 @@ const NewMentors = () => {
                                 <input type="text" name="languages" placeholder="Lenguajes" value={languages} onChange={handleInputChange} />
                             </div>
                         </div>
-                        <div className='data my-2'>
+                        <div className='data my-1'>
                             <div className=' mx-5'>
                                 <select className="form-select" aria-label="Default select example" name="category" onChange={handleInputChange} style={{ width: '15vw' }} required>
                                     <option value=''>Busca por categorías</option>
@@ -127,7 +127,7 @@ const NewMentors = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="cuenta  my-2">
+                        <div className="cuenta  my-1">
                             <div>
                                 <input type="email" name="email" placeholder="Correo electrónico" value={email} onChange={handleInputChange} className='mx-2' />
                                 <input type="password" name="password" placeholder="password" value={password} onChange={handleInputChange} className='mx-2' />

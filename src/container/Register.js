@@ -24,7 +24,7 @@ const Register = () => {
     }
 
     return (
-        <RegisterBg className="py-5">
+        <RegisterBg className="py-3">
             <div className='register'>
                 <h1>Registro</h1>
                 <form onSubmit={handleRegister}>

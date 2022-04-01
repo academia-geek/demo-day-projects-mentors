@@ -9,10 +9,10 @@ export const LoginBg = styled.div`
     padding:10px 10px ;
 
     .login{
-        border: 0.2px solid #807d7d;
-        box-shadow: 10px 10px 15px #807d7d;
+        /* border: 0.2px solid #807d7d; */
+        box-shadow: 2px 2px 15px 5px #807d7d;
         border-radius: 4px;
-        padding:20px 20px;
+        padding:10px 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
