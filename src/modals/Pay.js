@@ -34,6 +34,7 @@ const Modal = styled.div`
         h4{
             font-size:20px;
             margin-top: 50px;
+            text-align: center;
         }
         button{
             border-radius: 100%;
@@ -57,8 +58,8 @@ const Pay = ({ setModal, name, email, calendly, mentor, children }) => {
                         </div>
                     </div>
                     <div>
-                        <a href={calendly}>
-                            <button className="btn btn-outline-success bg-success text-white m-2 my-3" type="submit">Pagar</button>
+                        <a href={calendly} target="_blank" rel="noreferrer">
+                            <button className="btn btn-outline-success bg-success text-white m-2 my-3" type="submit" onClick={() => setModal(false)}>Pagar</button>
                         </a>
                     </div>
                     {children}
