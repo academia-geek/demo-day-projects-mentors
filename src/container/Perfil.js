@@ -57,7 +57,7 @@ const Perfil = () => {
                         <ol>JUEVES - 07:00 A.M. - 07:00 P.M.</ol>
                         <ol>VIERNES - 07:00 A.M. - 07:00 P.M.</ol>
                       </ul>
-                      <strong>NOTA:</strong> En el caso de requerir un horario fuera de los mencionados anteriormente, solo abro un horario más a partir de paquetes de 10 clases, en muy contadas ocasiones. Dicho horario sería de 7-8 p.m. (hora local Colombia) con base en disponibilidad. Las reservas en ese caso yo las haría internamente. 
+                      <strong>NOTA:</strong> En el caso de requerir un horario fuera de los mencionados anteriormente, solo abro un horario más a partir de paquetes de 10 clases, en muy contadas ocasiones. Dicho horario sería de 7-8 p.m. (hora local Colombia) con base en disponibilidad. Las reservas en ese caso yo las haría internamente.
                     </div>
                   </div>
                 </div>
@@ -81,7 +81,11 @@ const Perfil = () => {
               {/* <div className="calendly-inline-widget bg-black" data-url={mentors.calendly} style={{ minWidth: '300px', height: '500px' }}></div>
               <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> */}
             </div>
-            
+
+            {isLoggedIn &&
+              <NewComent />
+            }
+            <Opinions isLoggedIn={isLoggedIn} />
           </div>
         ))
         }

@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
-import NewComent from '../components/NewComent'
-import Opinions from '../components/Opinions'
 import SearchEspecialidad from '../components/SearchEspecialidad'
 import { Bghome } from '../styles/StyledHome'
 
@@ -54,10 +52,7 @@ const Home = ({ isLoggedIn }) => {
 
                     </div>
                 </div>
-                {isLoggedIn &&
-                    <NewComent />
-                }
-                <Opinions isLoggedIn={isLoggedIn} />
+
                 <div className="section">
                     <div className="card text-center bg-dark text-white">
                         <div className="card-body">
