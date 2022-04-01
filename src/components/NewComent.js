@@ -6,7 +6,7 @@ import { Form, FloatingLabel } from 'react-bootstrap';
 import { getAuth } from 'firebase/auth';
 import { Coment } from '../styles/StyledHome';
 
-const NewComent = () => {
+const NewComent = ({ id }) => {
 
     const dispatch = useDispatch()
     const data = getAuth()
@@ -23,15 +23,14 @@ const NewComent = () => {
 
     const handlePost = (e) => {
         e.preventDefault()
-        dispatch(registerComentAsync(nameUser, photoURL, opinion))
+        dispatch(registerComentAsync(nameUser, photoURL, opinion, id))
     }
 
 
 
     return (
-        <div>
-
-            <Coment>
+        <div className="d-flex justify-content-center">
+            <Coment className='mt-5 w-75'>
                 <h3><strong>Escribir opinión de nuestros productos</strong></h3>
 
                 <p>Comparte tu opinión con otros clientes</p>

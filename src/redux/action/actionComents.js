@@ -4,12 +4,13 @@ import { typesCom } from '../types/types'
 
 
 // Asyn action register comentario
-export const registerComentAsync = (nameUser, photoURL, opinion) => {
+export const registerComentAsync = (nameUser, photoURL, opinion, id) => {
     return (dispatch) => {
         const item = {
             nameUser,
             photoURL,
-            opinion
+            opinion,
+            id
         }
         addDoc(collection(db, "comentarios"), item)
             .then(resp => {

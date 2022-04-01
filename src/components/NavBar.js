@@ -26,10 +26,14 @@ const NavBar = ({ isLoggedIn }) => {
               <a className="nav-link active" aria-current="page" href="/">Inicio</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" href="/mentor">Registrarse como mentor</a>
+              {!isLoggedIn ?
+                <a className="nav-link active" href="/mentor">Registrarse como mentor</a>
+                :
+                ''
+              }
             </li>
             <li className="nav-item">
-              <a className="nav-link active" href="/">Ayuda</a>
+              <li className="nav-item"><a href="/list" className="nav-link active">Mentores</a></li>
             </li>
           </ul>
           <div>

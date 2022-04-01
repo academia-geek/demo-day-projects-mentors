@@ -63,18 +63,18 @@ const NewMentors = () => {
                                 <input type="text" name="name" placeholder="Nombre" value={name} onChange={handleInputChange} />
                             </div>
                             <div>
-                                <input type="text" name="description" placeholder="Description" value={description} onChange={handleInputChange} />
+                                <input type="text" name="description" placeholder="Descriptción" value={description} onChange={handleInputChange} />
                             </div>
                             <div>
-                                <input type="text" name="experience" placeholder="Experience" value={experience} onChange={handleInputChange} />
+                                <input type="text" name="experience" placeholder="Experiencia" value={experience} onChange={handleInputChange} />
                             </div>
                             <div>
-                                <input type="text" name="price" placeholder="Price" value={price} onChange={handleInputChange} />
+                                <input type="text" name="price" placeholder="Precio" value={price} onChange={handleInputChange} />
                             </div>
                         </div>
                         <div className='data my-1'>
                             <div>
-                                <input type="text" name="education" placeholder="Education" value={education} onChange={handleInputChange} />
+                                <input type="text" name="education" placeholder="Educación" value={education} onChange={handleInputChange} />
                             </div>
                             <div>
                                 <input type="text" name="calendly" placeholder="Url de Calendly" value={calendly} onChange={handleInputChange} />
@@ -130,7 +130,7 @@ const NewMentors = () => {
                         <div className="cuenta  my-1">
                             <div>
                                 <input type="email" name="email" placeholder="Correo electrónico" value={email} onChange={handleInputChange} className='mx-2' />
-                                <input type="password" name="password" placeholder="password" value={password} onChange={handleInputChange} className='mx-2' />
+                                <input type="password" name="password" placeholder="Contraseña" value={password} onChange={handleInputChange} className='mx-2' />
                             </div>
                             <div>
                                 <input type="file" name="img" placeholder="img" value={values.img} onChange={handleFileChanged} />

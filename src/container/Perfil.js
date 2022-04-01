@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FcPositiveDynamic } from "react-icons/fc";
 import { FcGraduationCap } from "react-icons/fc";
@@ -7,11 +7,15 @@ import { useSelector } from 'react-redux';
 import Footer from '../components/Footer';
 import { BgPerfil } from '../styles/StylePerfil';
 import { getAuth } from "firebase/auth";
+import Pay from '../modals/Pay';
+import NewComent from '../components/NewComent';
+import Opinions from '../components/Opinions';
 
 
-const Perfil = () => {
+const Perfil = ({ isLoggedIn }) => {
 
   const { search } = useSelector((store) => store.search);
+  const [modal, setModal] = useState(false)
   const data = getAuth()
   const name = data.currentUser.displayName
   const email = data.currentUser.email
@@ -71,21 +75,21 @@ const Perfil = () => {
               <h5> x2 - Sesiones:     {mentors.price} Hr</h5>
               <h5>Tiempo de respuesta: 4 Hr</h5>
               <h5>{mentors.email}</h5>
-              <a href={mentors.calendly}>
+              <div>
                 {mentors.name === name && mentors.email === email ?
                   ''
                   :
-                  <button className="btn btn-outline-success bg-success text-white m-2" type="submit">Agendar</button>
+                  <button className="btn btn-outline-success bg-success text-white m-2" onClick={() => setModal(true)}>Agendar</button>
                 }
-              </a>
+              </div>
               {/* <div className="calendly-inline-widget bg-black" data-url={mentors.calendly} style={{ minWidth: '300px', height: '500px' }}></div>
               <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> */}
             </div>
-
-            {isLoggedIn &&
-              <NewComent />
+            {
+              modal === true ? <Pay setModal={setModal} name={name} email={email} calendly={mentors.calendly} mentor={mentors.name} /> : ''
             }
-            <Opinions isLoggedIn={isLoggedIn} />
+            <NewComent id={mentors.codeProfile} />
+            <Opinions isLoggedIn={isLoggedIn} id={mentors.codeProfile} />
           </div>
         ))
         }

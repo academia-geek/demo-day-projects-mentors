@@ -9,19 +9,19 @@ const Footer = () => {
                     <div className="col-2 section">
                         <h5>Section</h5>
                         <ul className="nav flex-column">
-                            <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-muted">Home</a></li>
+                            <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-muted">Inicio</a></li>
                             <li className="nav-item mb-2"><a href="/list" className="nav-link p-0 text-muted">Mentores</a></li>
                         </ul>
                     </div>
 
                     <div className="col-4 offset-1">
                         <form >
-                            <h5>Subscribe to our newsletter</h5>
-                            <p>Monthly digest of whats new and exciting from us.</p>
+                            <h5>Suscribete a nuestro newsletter</h5>
+                            <p>Recibirás noticias, descuentos y mucho más</p>
                             <div className="d-flex w-100 gap-2 footer">
                                 <label for="newsletter1" className="visually-hidden">Email address</label>
-                                <input id="newsletter1" type="text" className="form-control" placeholder="Email address" />
-                                <button className="btn btn-success" type="button">Subscribe</button>
+                                <input id="newsletter1" type="text" className="form-control" placeholder="Email" />
+                                <button className="btn btn-success" type="button">Suscribete</button>
                             </div>
                         </form>
                     </div>

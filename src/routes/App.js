@@ -35,7 +35,7 @@ function App() {
         <Route path="/mentor" element={!isLoggedIn ? <NewMentors /> : <Navigate to="/profile" />} />
         <Route path="/Landing" element={<LandingPage isLoggedIn={isLoggedIn} />} />
         <Route path="/list" element={<ListMentors />} />
-        <Route path="/profile/:codeProfile" element={isLoggedIn ? <Perfil /> : <Navigate to="/login" />} />
+        <Route path="/profile/:codeProfile" element={isLoggedIn ? <Perfil isLoggedIn={isLoggedIn} /> : <Navigate to="/login" />} />
         <Route path="/profile/" element={isLoggedIn && <Navigate to="/list" />} />
       </Routes>
     </div>

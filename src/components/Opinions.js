@@ -5,7 +5,7 @@ import Edit from '../modals/Edit';
 import { listComentAsync, deleteAsync } from '../redux/action/actionComents';
 import { BgOpinion } from '../styles/StyledHome';
 
-const Opinions = ({ isLoggedIn }) => {
+const Opinions = ({ isLoggedIn, id }) => {
 
     const { coments } = useSelector((store) => store.coments)
     const [edit, setEdit] = useState([])
@@ -26,39 +26,38 @@ const Opinions = ({ isLoggedIn }) => {
     }
 
     return (
-        <div>
-
-            <BgOpinion className="my-5">
-                <div>
-                    <h3>Opiniones de clientes</h3>
-                </div>
+        <div className='d-flex justify-content-center'>
+            <BgOpinion className="mt-5 w-75">
                 {
                     coments.map((e, i) => (
-                        <div className='shadow p-3 mb-5 bg-body rounded' key={i}>
-                            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', margin: "20px 0px" }}>
-                                <img src={e.photoURL} alt="user" width="80px" style={{ borderRadius: '50%' }} />
-                                <div className="mx-3">
-                                    <h4>{e.nameUser}</h4>
-                                    <p>{e.opinion}</p>
+                        id === e.id ?
+                            <div className='shadow p-3 mb-5 bg-body rounded' key={i}>
+                                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', margin: "20px 0px" }}>
+                                    <img src={e.photoURL} alt="user" width="80px" style={{ borderRadius: '50%' }} />
+                                    <div className="mx-3">
+                                        <h4>{e.nameUser}</h4>
+                                        <p>{e.opinion}</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    {isLoggedIn && e.nameUser === data.currentUser.displayName ?
+                                        <div className="buttons">
+                                            <button type="button" value="update" onClick={() => handlePut(e.opinion)} className="btn btn-success mx-2">
+                                                Editar comentario
+                                            </button>
+
+                                            <button type="button" value="delete" onClick={() => dispatch(deleteAsync(e.opinion))} className="btn btn-success mx-2">
+                                                Borrar comentario
+                                            </button>
+                                        </div>
+                                        :
+                                        ''
+                                    }
+
                                 </div>
                             </div>
-                            <div>
-                                {isLoggedIn && e.nameUser === data.currentUser.displayName ?
-                                    <div className="buttons">
-                                        <button type="button" value="update" onClick={() => handlePut(e.opinion)} className="btn btn-success mx-2">
-                                            Editar comentario
-                                        </button>
-
-                                        <button type="button" value="delete" onClick={() => dispatch(deleteAsync(e.opinion))} className="btn btn-success mx-2">
-                                            Borrar comentario
-                                        </button>
-                                    </div>
-                                    :
-                                    ''
-                                }
-
-                            </div>
-                        </div>
+                            :
+                            ''
                     ))
                 }
             </BgOpinion>
