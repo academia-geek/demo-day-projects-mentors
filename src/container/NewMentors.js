@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom'
 import { fileUpload } from '../hekpers/fileUpload'
 import { useForm } from '../hooks/useForm'
 import { registerMentorAsync } from '../redux/action/actionMentor'
-import { registerAsync } from '../redux/action/actionRegister'
 import { RegisterBg } from '../styles/StyledRegister'
 import { v4 as uuidv4 } from 'uuid';
 
@@ -23,10 +22,9 @@ const NewMentors = () => {
         category: '',
         languages: '',
         calendly: '',
-        email: '',
-        password: ''
+        email: ''
     })
-    const { codeProfile, name, description, experience, price, especialidad, password, education, category, languages, calendly, email } = values
+    const { codeProfile, name, description, experience, price, especialidad, education, category, languages, calendly, email } = values
 
 
 
@@ -46,9 +44,9 @@ const NewMentors = () => {
 
     const handleRegister = (e) => {
         e.preventDefault()
-        dispatch(registerAsync(email, password, name))
         const img = values.img
-        dispatch(registerMentorAsync({ codeProfile, name, description, img, experience, price, especialidad, education, category, languages, calendly, email }))
+        const newMentor = { codeProfile, name, description, img, experience, price, especialidad, education, category, languages, calendly, email }
+        dispatch(registerMentorAsync(newMentor))
         navigate('/')
     }
 
@@ -58,7 +56,7 @@ const NewMentors = () => {
                 <div className='register my-3 w-75'>
                     <h1>Registrar como Mentor</h1>
                     <form onSubmit={handleRegister}>
-                        <div className='data my-1'>
+                        <div className='data my-2'>
                             <div>
                                 <input type="text" name="name" placeholder="Nombre" value={name} onChange={handleInputChange} />
                             </div>
@@ -72,7 +70,7 @@ const NewMentors = () => {
                                 <input type="text" name="price" placeholder="Precio" value={price} onChange={handleInputChange} />
                             </div>
                         </div>
-                        <div className='data my-1'>
+                        <div className='data my-2'>
                             <div>
                                 <input type="text" name="education" placeholder="Educación" value={education} onChange={handleInputChange} />
                             </div>
@@ -83,7 +81,7 @@ const NewMentors = () => {
                                 <input type="text" name="languages" placeholder="Lenguajes" value={languages} onChange={handleInputChange} />
                             </div>
                         </div>
-                        <div className='data my-1'>
+                        <div className='data my-2'>
                             <div className=' mx-5'>
                                 <select className="form-select" aria-label="Default select example" name="category" onChange={handleInputChange} style={{ width: '15vw' }} required>
                                     <option value=''>Categoría</option>
@@ -127,17 +125,14 @@ const NewMentors = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="cuenta  my-1">
+                        <div className="cuenta  my-2">
                             <div>
                                 <input type="email" name="email" placeholder="Correo electrónico" value={email} onChange={handleInputChange} className='mx-2' />
-                                <input type="password" name="password" placeholder="Contraseña" value={password} onChange={handleInputChange} className='mx-2' />
-                            </div>
-                            <div>
                                 <input type="file" name="img" placeholder="img" value={values.img} onChange={handleFileChanged} />
                             </div>
                         </div>
                         <div className="registrar">
-                            <button>Enviar</button>
+                            <button type="submit">Enviar</button>
                         </div>
                     </form>
                 </div>

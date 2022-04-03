@@ -26,7 +26,7 @@ const NavBar = ({ isLoggedIn }) => {
               <a className="nav-link active" aria-current="page" href="/">Inicio</a>
             </li>
             <li className="nav-item">
-              {!isLoggedIn ?
+              {isLoggedIn ?
                 <a className="nav-link active" href="/mentor">Registrarse como mentor</a>
                 :
                 ''

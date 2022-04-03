@@ -41,7 +41,7 @@ const Home = ({ isLoggedIn }) => {
                             5 estrellas a alguno de nuestros Mentores
                         </h4>
                         <div className="d-grid gap-2 col-6 m-2">
-                            {!isLoggedIn ?
+                            {isLoggedIn ?
                                 <Link to="/mentor">
                                     <button className="btn btn-success" type="button">Registrarse como Mentor</button>
                                 </Link>

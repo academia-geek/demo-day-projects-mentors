@@ -31,7 +31,7 @@ const NewComent = ({ id }) => {
     return (
         <div className="d-flex justify-content-center">
             <Coment className='mt-5 w-75'>
-                <h3><strong>Escribir opinión de nuestros productos</strong></h3>
+                <h3><strong>Escribir opinión sobre el mentor</strong></h3>
 
                 <p>Comparte tu opinión con otros clientes</p>
                 <Form>
