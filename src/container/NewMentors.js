@@ -7,7 +7,7 @@ import { registerMentorAsync } from '../redux/action/actionMentor'
 import { RegisterBg } from '../styles/StyledRegister'
 import { v4 as uuidv4 } from 'uuid';
 
-const NewMentors = () => {
+const NewMentors = ({ userEmail }) => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const [values, handleInputChange] = useForm({
@@ -22,12 +22,9 @@ const NewMentors = () => {
         category: '',
         languages: '',
         calendly: '',
-        email: ''
     })
-    const { codeProfile, name, description, experience, price, especialidad, education, category, languages, calendly, email } = values
-
-
-
+    const { codeProfile, name, description, experience, price, especialidad, education, category, languages, calendly } = values
+    const email = userEmail
     const handleFileChanged = (e) => {
 
         const file = e.target.files[0];
@@ -45,8 +42,7 @@ const NewMentors = () => {
     const handleRegister = (e) => {
         e.preventDefault()
         const img = values.img
-        const newMentor = { codeProfile, name, description, img, experience, price, especialidad, education, category, languages, calendly, email }
-        dispatch(registerMentorAsync(newMentor))
+        dispatch(registerMentorAsync({ codeProfile, name, description, img, experience, price, especialidad, education, category, languages, calendly, email }))
         navigate('/')
     }
 
@@ -127,7 +123,7 @@ const NewMentors = () => {
                         </div>
                         <div className="cuenta  my-2">
                             <div>
-                                <input type="email" name="email" placeholder="Correo electrónico" value={email} onChange={handleInputChange} className='mx-2' />
+                                <input type="email" name="email" required readOnly placeholder="Correo electrónico" value={email} onChange={handleInputChange} className='mx-2' />
                                 <input type="file" name="img" placeholder="img" value={values.img} onChange={handleFileChanged} />
                             </div>
                         </div>
@@ -141,7 +137,5 @@ const NewMentors = () => {
     )
 }
 
-// faltas el creador de id para codeprofile, img, select form para categorias
-//dispatch, addcolletion, 
 
 export default NewMentors

@@ -13,10 +13,12 @@ import LandingPage from "../container/LandingPage";
 function App() {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [userEmail, setUserEmail] = useState('')
 
   useEffect(() => {
     const auth = getAuth()
     onAuthStateChanged(auth, (user) => {
+      setUserEmail(auth.currentUser.email)
       if (user?.uid) {
         setIsLoggedIn(true)
       }
@@ -25,6 +27,7 @@ function App() {
       }
     })
   }, [])
+
   return (
     <div>
       <NavBar isLoggedIn={isLoggedIn} />
@@ -32,7 +35,7 @@ function App() {
         <Route path="/login" element={!isLoggedIn ? <Login /> : <Navigate to="/profile" />} />
         <Route path="/register" element={!isLoggedIn ? <Register /> : <Navigate to="/profile" />} />
         <Route path="/" element={<Home isLoggedIn={isLoggedIn} />} />
-        <Route path="/mentor" element={<NewMentors />} />
+        <Route path="/mentor" element={<NewMentors userEmail={userEmail} />} />
         <Route path="/Landing" element={<LandingPage isLoggedIn={isLoggedIn} />} />
         <Route path="/list" element={<ListMentors />} />
         <Route path="/profile/:codeProfile" element={isLoggedIn ? <Perfil isLoggedIn={isLoggedIn} /> : <Navigate to="/login" />} />
