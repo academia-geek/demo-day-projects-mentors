@@ -4,6 +4,7 @@ import { logoutAsync } from '../redux/action/actionLogin'
 import Search from './Search'
 import { BiLogInCircle } from 'react-icons/bi';
 import { BiLogOutCircle } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 
 
 const NavBar = ({ isLoggedIn }) => {
@@ -27,7 +28,7 @@ const NavBar = ({ isLoggedIn }) => {
             </li>
             <li className="nav-item">
               {isLoggedIn ?
-                <a className="nav-link active" href="/mentor">Registrarse como mentor</a>
+                <Link className="nav-link active" to="/mentor">Registrarse como mentor</Link>
                 :
                 ''
               }
