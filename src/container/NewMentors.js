@@ -7,12 +7,11 @@ import { registerMentorAsync } from '../redux/action/actionMentor'
 import { RegisterBg } from '../styles/StyledRegister'
 import { v4 as uuidv4 } from 'uuid';
 
-const NewMentors = ({ userEmail }) => {
+const NewMentors = ({ userEmail, userName }) => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const [values, handleInputChange] = useForm({
         codeProfile: uuidv4(),
-        name: '',
         description: '',
         img: '',
         experience: '',
@@ -23,8 +22,9 @@ const NewMentors = ({ userEmail }) => {
         languages: '',
         calendly: '',
     })
-    const { codeProfile, name, description, experience, price, especialidad, education, category, languages, calendly } = values
+    const { codeProfile, description, experience, price, especialidad, education, category, languages, calendly } = values
     const email = userEmail
+    const name = userName
     const handleFileChanged = (e) => {
 
         const file = e.target.files[0];
@@ -54,7 +54,7 @@ const NewMentors = ({ userEmail }) => {
                     <form onSubmit={handleRegister}>
                         <div className='data my-2'>
                             <div>
-                                <input type="text" name="name" placeholder="Nombre" value={name} onChange={handleInputChange} />
+                                <input type="text" name="name" requider readOnly placeholder="Nombre" value={name} onChange={handleInputChange} />
                             </div>
                             <div>
                                 <input type="text" name="description" placeholder="Descriptción" value={description} onChange={handleInputChange} />

@@ -14,11 +14,13 @@ function App() {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [userEmail, setUserEmail] = useState('')
+  const [userName, setUserName] = useState('')
 
   useEffect(() => {
     const auth = getAuth()
     onAuthStateChanged(auth, (user) => {
       setUserEmail(auth.currentUser.email)
+      setUserName(auth.currentUser.displayName)
       if (user?.uid) {
         setIsLoggedIn(true)
       }
@@ -35,7 +37,7 @@ function App() {
         <Route path="/login" element={!isLoggedIn ? <Login /> : <Navigate to="/profile" />} />
         <Route path="/register" element={!isLoggedIn ? <Register /> : <Navigate to="/profile" />} />
         <Route path="/" element={<Home isLoggedIn={isLoggedIn} />} />
-        <Route path="/mentor" element={isLoggedIn ? <NewMentors userEmail={userEmail} /> : <Navigate to="/login" />} />
+        <Route path="/mentor" element={isLoggedIn ? <NewMentors userEmail={userEmail} userName={userName} /> : <Navigate to="/login" />} />
         <Route path="/Landing" element={<LandingPage isLoggedIn={isLoggedIn} />} />
         <Route path="/list" element={<ListMentors />} />
         <Route path="/profile/:codeProfile" element={isLoggedIn ? <Perfil isLoggedIn={isLoggedIn} /> : <Navigate to="/login" />} />
