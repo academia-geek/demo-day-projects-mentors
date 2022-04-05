@@ -34,7 +34,7 @@ const NavBar = ({ isLoggedIn }) => {
               }
             </li>
             <li className="nav-item">
-              <li className="nav-item"><a href="/list" className="nav-link active">Mentores</a></li>
+              <a href="/list" className="nav-link active">Mentores</a>
             </li>
           </ul>
           <div>

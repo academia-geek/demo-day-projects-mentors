@@ -7,7 +7,7 @@ const Footer = () => {
             <BgFooter className="py-5">
                 <div className="row header" style={{ display: 'flex', justifyContent: 'center' }}>
                     <div className="col-2 section">
-                        <h5>Section</h5>
+                        <h5>Sección</h5>
                         <ul className="nav flex-column">
                             <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-muted">Inicio</a></li>
                             <li className="nav-item mb-2"><a href="/list" className="nav-link p-0 text-muted">Mentores</a></li>

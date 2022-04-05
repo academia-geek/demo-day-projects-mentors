@@ -57,24 +57,24 @@ const NewMentors = ({ userEmail, userName }) => {
                                 <input type="text" name="name" requider readOnly placeholder="Nombre" value={name} onChange={handleInputChange} />
                             </div>
                             <div>
-                                <input type="text" name="description" placeholder="Descriptción" value={description} onChange={handleInputChange} />
+                                <input type="text" name="description" required placeholder="Descripción" value={description} onChange={handleInputChange} />
                             </div>
                             <div>
-                                <input type="text" name="experience" placeholder="Experiencia" value={experience} onChange={handleInputChange} />
+                                <input type="text" name="experience" required placeholder="Experiencia" value={experience} onChange={handleInputChange} />
                             </div>
                             <div>
-                                <input type="text" name="price" placeholder="Precio" value={price} onChange={handleInputChange} />
+                                <input type="text" name="price" required placeholder="Precio" value={price} onChange={handleInputChange} />
                             </div>
                         </div>
                         <div className='data my-2'>
                             <div>
-                                <input type="text" name="education" placeholder="Educación" value={education} onChange={handleInputChange} />
+                                <input type="text" name="education" required placeholder="Educación" value={education} onChange={handleInputChange} />
                             </div>
                             <div>
-                                <input type="text" name="calendly" placeholder="Url de Calendly" value={calendly} onChange={handleInputChange} />
+                                <input type="text" name="calendly" required placeholder="Url de Calendly" value={calendly} onChange={handleInputChange} />
                             </div>
                             <div>
-                                <input type="text" name="languages" placeholder="Lenguajes" value={languages} onChange={handleInputChange} />
+                                <input type="text" name="languages" required placeholder="Idiomas" value={languages} onChange={handleInputChange} />
                             </div>
                         </div>
                         <div className='data my-2'>
@@ -87,7 +87,7 @@ const NewMentors = ({ userEmail, userName }) => {
                                 </select>
                             </div>
                             <div className="dropdown mx-5">
-                                <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button className="btn btn-secondary dropdown-toggle w-100 px-3" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     {especialidad}
                                 </button>
                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1" style={{ width: '25vw' }}>
@@ -112,7 +112,7 @@ const NewMentors = ({ userEmail, userName }) => {
                                     <li>
                                         <div className="dropdown-item" >
                                             <select className="form-select" aria-label="Default select example" name="especialidad" onChange={handleInputChange}>
-                                                <option value=''>finanzas</option>
+                                                <option value=''>Finanzas</option>
                                                 <option value="Financiero">Viabilidad y Como Valorar la empresa</option>
                                                 <option value="Contabilidad">Que hacer para cumplir mis objetivos financieros</option>
                                             </select>
